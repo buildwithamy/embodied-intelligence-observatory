@@ -1,7 +1,26 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><title>全球具身智能观察 第1期</title>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>人形机器人落地的两本账 · 全球具身智能观察 第 1 期</title>
+<meta name="description" content="双周刊第 1 期（2026.09.24–10.07）：中国在数台数，美国在算单台账。重大交易、人形价格表、十个场景的成熟度、这两周能上手的工具、九所高校的新专业，以及 Digit 的两本账。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="全球具身智能观察">
+<meta property="og:title" content="人形机器人落地的两本账：中国在数台数，美国在算单台账">
+<meta property="og:description" content="全球具身智能观察 · 双周刊第 1 期（创刊号），2026.09.24–10.07。">
+<meta property="og:url" content="https://buildwithamy.github.io/embodied-intelligence-observatory/issues/01/">
+<meta property="og:image" content="https://buildwithamy.github.io/embodied-intelligence-observatory/issues/01/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://buildwithamy.github.io/embodied-intelligence-observatory/issues/01/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23cc785c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23faf9f5' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23faf9f5'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#181715" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600&display=swap">
+<!-- Fonts load without blocking render: readers who cannot reach Google Fonts get system fonts at once. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600&display=swap"></noscript>
 <style>
 /* Layout: white-canvas parchment magazine. White carries narrative; cream cards hold figures; two dark beats (scene map, deep case). 1200px frame, 720px reading column. */
 :root{
@@ -12,8 +31,8 @@
   --coral:#cc785c; --coral-ink:#a9583e; --coral-wash:#f8ebe4; --teal:#5db8a6; --amber:#e8a55a;
   --d1:#c2643f; --d2:#139a88; --cta-bg:#a9583e; --cta-fg:#ffffff;
   --ok:#3d7a4f; --ok-bg:#e6f1e6; --self:#8a6414; --self-bg:#f6edd6; --news:#5a5852; --news-bg:#efebe5; --ed:#7a4b8c; --ed-bg:#f1e8f3; --gap:#d9d3c9;
-  --f-disp:"Noto Serif SC","Source Serif 4",Georgia,serif;
-  --f-body:Inter,"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-disp:"Noto Serif SC","Source Han Serif SC","Noto Serif CJK SC","Songti SC",STSong,"Source Serif 4",Georgia,serif;
+  --f-body:Inter,"Noto Sans SC","Source Han Sans SC","Noto Sans CJK SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
   color-scheme:light;
 }
@@ -331,6 +350,7 @@ details.more summary{cursor:pointer;color:var(--coral-ink);font-size:14px;font-w
 .eng li{margin-bottom:6px}
 .foot{padding-block:36px;font-size:13px;color:var(--band-mute);background:var(--band)}
 .foot .frame{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+.foot a{color:var(--band-fg)}
 
 .toc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;margin-top:20px}
 .toc a{display:flex;gap:12px;align-items:baseline;padding:13px 0;border-top:1px solid var(--hair);color:var(--ink);text-decoration:none;font-size:15px;line-height:1.5}
@@ -341,6 +361,8 @@ details.more summary{cursor:pointer;color:var(--coral-ink);font-size:14px;font-w
 .aside{font-size:14px;color:var(--muted);max-width:760px;margin-top:18px}
 .b-dark .aside{color:var(--band-mute)}
 </style>
+</head>
+<body>
 
 <nav class="nav" aria-label="本期导航">
   <div class="frame">
@@ -362,7 +384,7 @@ details.more summary{cursor:pointer;color:var(--coral-ink);font-size:14px;font-w
   <div class="frame">
     <div class="cover">
       <div>
-        <div class="eyebrow">双周刊 · 第 1 期 · 2026.09.24 – 10.07 &nbsp;<span class="pill">样刊</span></div>
+        <div class="eyebrow">双周刊 · 第 1 期 · 2026.09.24 – 10.07 &nbsp;<span class="pill">创刊号</span></div>
         <h1>人形机器人落地的两本账：<span class="nw">中国在<em>数台数</em>，</span><span class="nw">美国在<em>算单台账</em></span></h1>
         <p class="lede">国庆前后，智元把 300 多台机器人送进长隆，又在 100 家门店各放了一台；银河通用的新品上线一天，预订过了 200 台。太平洋另一边，Agility 把 Digit 的账摊开给投资人看：月费 8,500 美元，1,000 台订单要一项技能一项技能地兑现。两本账都缺同一页：这些机器人每天到底干了多少活。</p>
       </div>
@@ -938,6 +960,7 @@ details.more summary{cursor:pointer;color:var(--coral-ink);font-size:14px;font-w
         <div class="sh" style="margin-bottom:20px"><span class="no">编后</span><h2>这期我们查了什么</h2></div>
         <p style="font-size:15px">对照了 The Robot Report、RobotToday、Humanoids Daily 和 21 世纪经济报道。Physical Intelligence、Google DeepMind、LeRobot、NVIDIA 新闻室这两周没有新发布；宇树、星海图、傅利叶、Figure 在窗口内没有找到可靠的落地或技术消息，这期就不写了。</p>
         <p style="font-size:15px;margin-top:12px">上半年人形出货有两组数：IDC 说约 2.5 万台、中国厂商约 78%；<a href="https://21jingji.com/article/20261002/herald/894cb02fbfc14660d8e452068b44bdb0.html">另一组统计</a>说约 1.91 万台、中国超过 97%。两组并列，留给你判断。</p>
+        <p style="font-size:15px;margin-top:12px">本刊开源。选题标准、写作规范和这一页的源码都放在 <a href="https://github.com/buildwithamy/embodied-intelligence-observatory">GitHub</a> 上；发现漏掉的事件或写错的数字，可以直接提 Issue。</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:20px;font-size:13.5px">
           <span class="ev o">官方</span><span>公告、监管文件、论文</span>
           <span class="ev s">公司自述</span><span>演示、投资者材料</span>
@@ -959,7 +982,7 @@ details.more summary{cursor:pointer;color:var(--coral-ink);font-size:14px;font-w
   </div>
 </section>
 
-<footer class="foot"><div class="frame"><span>全球具身智能观察 · 双周刊 · 开源项目 · 插画为本刊原创</span><span class="mono">第 1 期 · 2026.09.24–10.07 · 样刊</span></div></footer>
+<footer class="foot"><div class="frame"><span>全球具身智能观察 · 双周刊 · 开源项目 · 插画为本刊原创</span><span class="mono">第 1 期 · 2026.09.24–10.07 · 创刊号</span><span><a href="https://github.com/buildwithamy/embodied-intelligence-observatory">GitHub</a> · 代码 MIT · 内容 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a> · AI 辅助写作与绘图，编辑审阅</span></div></footer>
 <div class="tip" id="tip" hidden></div>
 
 <script>
@@ -1104,4 +1127,5 @@ details.more summary{cursor:pointer;color:var(--coral-ink);font-size:14px;font-w
   })();
 })();
 </script>
-</body></html>
+</body>
+</html>
