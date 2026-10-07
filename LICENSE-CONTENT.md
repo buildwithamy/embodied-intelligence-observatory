@@ -4,8 +4,8 @@
 
 ## 适用范围
 
-- 期刊页面中的文字、表格和图表数据，例如 `site/previews/issue-01/`；
-- 原创插画和示意图，例如 `site/previews/issue-01/src/art/`；
+- 期刊页面中的文字、表格和图表数据，例如 `site/issues/01/`；
+- 原创插画和示意图，例如 `site/issues/01/src/art/`；
 - 编辑文档，例如 `docs/EIO_改进方案_V2.md`。
 
 页面中的 HTML、CSS、JavaScript 代码，以及 `src/`、`tests/`、`scripts/`、构建脚本和工作流，按 [MIT 许可](LICENSE)提供。

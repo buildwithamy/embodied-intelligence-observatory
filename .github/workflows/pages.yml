@@ -22,14 +22,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Build issue pages
-        run: python3 site/previews/issue-01/src/build.py
+      - name: Build site
+        run: python3 site/build.py
       - name: Assemble site
         run: |
-          mkdir -p _site/issues/01
-          cp site/previews/issue-01/index.html site/previews/issue-01/og.png _site/issues/01/
-          # The latest issue doubles as the home page; its canonical link points to /issues/01/.
-          cp site/previews/issue-01/index.html _site/index.html
+          mkdir -p _site
+          cp site/index.html _site/
+          for dir in site/issues/*/; do
+            slug=$(basename "$dir")
+            mkdir -p "_site/issues/$slug"
+            cp "$dir/index.html" "$dir/og.png" "_site/issues/$slug/"
+          done
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

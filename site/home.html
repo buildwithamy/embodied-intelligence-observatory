@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>全球具身智能观察 · 具身智能落地双周刊</title>
+<meta name="description" content="持续跟踪具身智能的一手信源，筛出价值最高的新闻和落地案例，按工程师、产品/项目经理和教育者关心的问题拆解。两周一期，每条标明证据等级。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="全球具身智能观察">
+<meta property="og:title" content="全球具身智能观察 · 具身智能落地双周刊">
+<meta property="og:description" content="持续跟踪一手信源，筛出价值最高的新闻和落地案例，按工程师、产品/项目经理和教育者关心的问题拆解。">
+<meta property="og:url" content="{{base}}">
+<meta property="og:image" content="{{og_image}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{{base}}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23cc785c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23faf9f5' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23faf9f5'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#181715" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600&display=swap"></noscript>
+<style>
+/* Home page: same parchment tokens as the issue pages. */
+:root{
+  --canvas:#ffffff; --paper:#ffffff; --soft:#faf9f5; --cream:#f5f0e8; --strong:#efe9de;
+  --band:#181715; --band-fg:#faf9f5; --band-mute:#a09d96;
+  --hair:#e6dfd8; --hair-soft:#ebe6df;
+  --ink:#141413; --body:#3d3d3a; --muted:#6c6a64; --faint:#8e8b82;
+  --coral:#cc785c; --coral-ink:#a9583e; --coral-wash:#f8ebe4; --teal:#5db8a6; --amber:#e8a55a;
+  --cta-bg:#a9583e; --cta-fg:#ffffff;
+  --ok:#3d7a4f; --ok-bg:#e6f1e6; --self:#8a6414; --self-bg:#f6edd6; --news:#5a5852; --news-bg:#efebe5; --ed:#7a4b8c; --ed-bg:#f1e8f3;
+  --f-disp:"Noto Serif SC","Source Han Serif SC","Noto Serif CJK SC","Songti SC",STSong,"Source Serif 4",Georgia,serif;
+  --f-body:Inter,"Noto Sans SC","Source Han Sans SC","Noto Sans CJK SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --canvas:#181715; --paper:#1f1e1b; --soft:#1f1e1b; --cream:#2d2a26; --strong:#34312c;
+  --band:#0f0e0d; --band-fg:#faf9f5; --band-mute:#a09d96;
+  --hair:#34312c; --hair-soft:#2b2925;
+  --ink:#faf9f5; --body:#d6d1c7; --muted:#a09d96; --faint:#86837b;
+  --coral:#d98a6e; --coral-ink:#e8a58a; --coral-wash:#36261f;
+  --cta-bg:#d98a6e; --cta-fg:#181715;
+  --ok:#9fd0a8; --ok-bg:#1f2c22; --self:#e6c27a; --self-bg:#2f2817; --news:#c9c4ba; --news-bg:#2b2925; --ed:#d6b3e2; --ed-bg:#2e2433;
+  color-scheme:dark;}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--canvas);color:var(--body);font-family:var(--f-body);font-size:16px;line-height:1.75}
+a{color:var(--coral-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--coral);outline-offset:2px;border-radius:4px}
+h1,h2,h3{color:var(--ink);margin:0;text-wrap:balance}
+p,ul{margin:0}
+.frame{max-width:1120px;margin:0 auto;padding-inline:24px}
+@media (max-width:600px){.frame{padding-inline:16px}}
+.band{padding-block:80px}
+@media (max-width:700px){.band{padding-block:52px}}
+.b-cream{background:var(--cream)} .b-soft{background:var(--soft)}
+
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--canvas) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+.nav .frame{display:flex;align-items:center;gap:8px 22px;min-height:56px;flex-wrap:wrap}
+.mark{font-family:var(--f-disp);font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.links{display:flex;gap:4px 18px;flex-wrap:wrap;font-size:14px;font-weight:500;margin-left:auto}
+.links a{color:var(--muted);text-decoration:none}
+.links a:hover{color:var(--ink)}
+@media (max-width:640px){.links{display:none}}
+
+.hero{padding-block:64px 72px}
+.eyebrow{font:500 12px/1.4 var(--f-body);letter-spacing:1.5px;color:var(--muted)}
+.hero h1{font-family:var(--f-disp);font-weight:400;font-size:clamp(38px,5.4vw,64px);line-height:1.1;letter-spacing:-1.5px;margin-top:18px}
+.dek{font-family:var(--f-disp);font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:var(--ink);margin-top:18px;max-width:780px}
+.lede{font-size:17px;line-height:1.85;margin-top:14px;max-width:740px}
+.what{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;margin-top:40px;border-top:1px solid var(--ink)}
+.what div{padding:16px 0;border-bottom:1px solid var(--hair)}
+.what b{display:block;color:var(--ink);font-weight:600;font-size:15.5px}
+.what span{display:block;font-size:14px;color:var(--muted);line-height:1.65;margin-top:4px}
+@media (max-width:860px){.what{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.what{grid-template-columns:minmax(0,1fr)}}
+
+.sh{display:grid;gap:8px;margin-bottom:28px;max-width:780px}
+.sh .no{font-family:var(--f-mono);font-size:13px;color:var(--coral-ink)}
+.sh h2{font-family:var(--f-disp);font-weight:400;font-size:clamp(26px,3.4vw,38px);line-height:1.2;letter-spacing:-.5px}
+
+.latest{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,11fr);gap:40px;align-items:center;background:var(--paper);border:1px solid var(--hair);border-radius:20px;padding:32px;text-decoration:none;color:inherit}
+.latest:hover{border-color:var(--coral)}
+.latest .art{color:var(--ink)} .latest .art svg{display:block;width:100%;height:auto}
+.latest .meta{font:500 13px/1.4 var(--f-mono);color:var(--coral-ink)}
+.latest h3{font-family:var(--f-disp);font-weight:400;font-size:clamp(28px,3.2vw,40px);line-height:1.2;letter-spacing:-.6px;margin-top:10px}
+.latest .subt{font-family:var(--f-disp);font-size:20px;line-height:1.5;color:var(--ink);margin-top:6px}
+.latest .lede{font-size:15px;line-height:1.8;margin-top:14px}
+.hl{list-style:none;padding:0;margin-top:16px;border-top:1px solid var(--hair)}
+.hl li{display:grid;grid-template-columns:3.6em minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid var(--hair-soft);font-size:14px;line-height:1.6}
+.hl i{font-style:normal;font-weight:600;color:var(--coral-ink);font-size:12.5px;padding-top:1px}
+.cta{display:inline-block;margin-top:20px;background:var(--cta-bg);color:var(--cta-fg);border-radius:10px;padding:11px 18px;font-weight:500;font-size:15px}
+@media (max-width:900px){.latest{grid-template-columns:minmax(0,1fr);gap:20px;padding:22px}}
+
+.list{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:72px minmax(0,1fr) auto auto;gap:6px 20px;align-items:center;padding:18px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:inherit}
+a.row:hover b{color:var(--coral-ink)}
+.row .num{font:500 28px/1 var(--f-mono);color:var(--ink);letter-spacing:-1px}
+.row b{display:block;font-family:var(--f-disp);font-weight:500;font-size:21px;color:var(--ink);line-height:1.35}
+.row small{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.row .win{font:13px/1.4 var(--f-mono);color:var(--muted);white-space:nowrap}
+.row .tag{font:500 12px/1 var(--f-body);color:var(--coral-ink);background:var(--coral-wash);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.row.next .num,.row.next b{color:var(--faint)}
+@media (max-width:640px){.row{grid-template-columns:48px minmax(0,1fr)}.row .num{font-size:22px}.row .win,.row .tag{grid-column:2;justify-self:start}}
+
+.method{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+@media (max-width:900px){.method{grid-template-columns:minmax(0,1fr);gap:28px}}
+.method h3{font-family:var(--f-disp);font-weight:500;font-size:20px;margin-bottom:10px}
+.method p,.method li{font-size:14.5px;line-height:1.75}
+.method ul{padding-left:18px}
+.method li+li{margin-top:6px}
+.ev{display:inline-flex;justify-self:start;font:500 11.5px/1 var(--f-body);padding:5px 8px;border-radius:999px;white-space:nowrap}
+.ev.o{color:var(--ok);background:var(--ok-bg)} .ev.s{color:var(--self);background:var(--self-bg)} .ev.n{color:var(--news);background:var(--news-bg)} .ev.e{color:var(--ed);background:var(--ed-bg)}
+.legend{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 10px;align-items:center;font-size:14px;margin-bottom:16px}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px;font-size:13px}
+.ladder span{padding:4px 9px;border-radius:8px;background:var(--strong);color:var(--ink)}
+.ladder span:last-of-type{background:var(--coral);color:#fff}
+.ladder i{font-style:normal;color:var(--faint);align-self:center}
+.weights{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;font-size:14px;margin-bottom:12px}
+.weights b{font-family:var(--f-mono);font-weight:500;color:var(--ink)}
+
+.foot{padding-block:36px;font-size:13px;color:var(--band-mute);background:var(--band)}
+.foot .frame{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+.foot a{color:var(--band-fg)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="网站导航">
+  <div class="frame">
+    <a class="mark" href="./">全球具身智能观察</a>
+    <div class="links"><a href="#latest">最新一期</a><a href="#issues">全部期刊</a><a href="#method">方法与信源</a><a href="{{repo}}">GitHub</a></div>
+  </div>
+</nav>
+
+<header class="hero frame">
+  <div class="eyebrow">双周刊 · 开源 · 中文为主，附英文摘要</div>
+  <h1>全球具身智能观察</h1>
+  <p class="dek">持续跟踪具身智能的一手信源，筛出价值最高的新闻和落地案例，按工程师、产品/项目经理和教育者关心的问题拆解。</p>
+  <p class="lede">每条写清四件事：是什么（版本、参数、许可），能不能用（价格、获取方式、硬件门槛），对研发、产品与项目、教育各有什么影响，还缺什么证据。两周一期。</p>
+  <div class="what">
+    <div><b>重大交易</b><span>只写影响技术栈、供应链和人才流向的并购与融资</span></div>
+    <div><b>产品档案</b><span>价格、可购状态、自由度、负载、算力和安全设计，各附来源</span></div>
+    <div><b>场景成熟度</b><span>每个场景处在演示、试点、小批量还是规模化，附部署证据</span></div>
+    <div><b>能上手的工具</b><span>模型、工具链和开源项目的形态、许可、硬件门槛和接入方式</span></div>
+    <div><b>专业与课程</b><span>高校开设、职业能力评价、竞赛日历和可直接用的实验课</span></div>
+    <div><b>落地案例拆解</b><span>每期一个真实部署：任务、系统结构、流程、指标和缺口</span></div>
+  </div>
+</header>
+
+<section class="band b-cream" id="latest">
+  <div class="frame">
+{{latest}}
+  </div>
+</section>
+
+<section class="band" id="issues">
+  <div class="frame">
+    <div class="sh"><h2>全部期刊</h2></div>
+    <div class="list">{{issues}}</div>
+  </div>
+</section>
+
+<section class="band b-soft" id="method">
+  <div class="frame">
+    <div class="sh"><h2>方法与信源</h2></div>
+    <div class="method">
+      <div>
+        <h3>信源</h3>
+        <ul>
+          <li>一手优先：公司新闻稿、监管文件、国家标准、政府和高校公告、GitHub 与 Hugging Face 的发布页。</li>
+          <li>写完对照 The Robot Report、Humanoids Daily、RobotToday、21 世纪经济报道等行业媒体查漏。</li>
+          <li>每期“编后”写明查了哪些源，哪些源两周没有新消息。</li>
+        </ul>
+      </div>
+      <div>
+        <h3>证据与口径</h3>
+        <div class="legend">
+          <span class="ev o">官方</span><span>公告、监管文件、论文</span>
+          <span class="ev s">公司自述</span><span>演示、投资者材料</span>
+          <span class="ev n">媒体</span><span>还没回到一手来源</span>
+          <span class="ev e">说明</span><span>评测范围或观点</span>
+        </div>
+        <p>台数分六级看，越往上越接近真实：</p>
+        <div class="ladder"><span>产能</span><i>→</i><span>订单</span><i>→</i><span>出货</span><i>→</i><span>部署</span><i>→</i><span>在岗</span><i>→</i><span>有效工作</span></div>
+        <p>厂商没公开的数据画成斜纹留白，不替它们补；公开过的时间表记进台账，到期对账。</p>
+      </div>
+      <div>
+        <h3>选题</h3>
+        <div class="weights">
+          <span>落地证据</span><b>25%</b><span>可用性与可借鉴性</span><b>25%</b><span>能力边界变化</span><b>20%</b>
+          <span>影响面</span><b>15%</b><span>证据质量</span><b>10%</b><span>教育价值</span><b>5%</b>
+        </div>
+        <p>重大投融资单独判断：先看对行业的影响，再看金额。不做估值和股价分析。<a href="{{repo}}/blob/main/docs/EIO_改进方案_V2.md">完整标准</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><div class="frame"><span>全球具身智能观察 · 双周刊 · 开源项目</span><span><a href="{{repo}}">GitHub</a> · 代码 MIT · 内容 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a> · AI 辅助写作与绘图，编辑审阅</span></div></footer>
+</body>
+</html>
