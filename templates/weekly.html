@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="具身智能周刊：近期重要变化、应用与教育影响，以及值得继续追问的研究问题。">
+  <title>{{WEEK}} · 具身智能周刊</title>
+  <link rel="stylesheet" href="{{ASSETS}}weekly.css?theme=parchment-1">
+  <script src="{{ASSETS}}weekly.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#quick">跳到速读</a>
+<div class="reading-progress" aria-hidden="true"></div>
+<header class="masthead">
+  <a href="#top" class="wordmark"><span class="mark" aria-hidden="true">观</span><span>具身智能观察<span class="wordmark-en">EMBODIED INTELLIGENCE OBSERVATORY</span></span></a>
+  <div class="edition-stamp">{{WEEK}}<span>具身智能周刊</span></div>
+</header>
+<nav class="section-nav" aria-label="本期导航">
+  <a href="#quick">10 分钟速读</a><a href="#timeline">近期大事</a><a href="#stories">重点解读</a><a href="#impact">应用影响</a><a href="#research">研究雷达</a><a href="#learning">学习路径</a>
+</nav>
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-title-line"><span>EMBODIED INTELLIGENCE WEEKLY</span><span>{{WEEK_RANGE}} · {{YEAR}}</span></div>
+    <div class="hero-cover"><div class="hero-lead"><p class="eyebrow">{{COVER_LABEL}}</p><h1 id="hero-title">{{HEADLINE}}</h1><p class="thesis">{{THESIS}}</p><a class="read-link" href="{{COVER_HREF}}">{{COVER_LINK_TEXT}} <span>↗</span></a></div>{{COVER_FIGURE}}</div>
+    <div class="hero-signals" aria-label="本期三个变化">{{SIGNALS}}</div>
+    <div class="coverage" aria-label="本期覆盖">{{COVERAGE}}</div>
+    <p class="coverage-note">本期精选与近期回溯 · <a href="#quick">先读 {{QUICK_COUNT}} 条速读 ↓</a></p>
+  </section>
+  <section id="quick" class="quick-section" aria-labelledby="quick-title">
+    <div class="section-heading"><span class="section-no">01</span><div><p class="eyebrow">THE BRIEFING</p><h2 id="quick-title">10 分钟速读</h2></div><p>{{QUICK_COUNT}} 条消息，<br>附上解读与待验证的问题。</p></div>
+    <div class="quick-grid">{{QUICK}}</div>
+  </section>
+  <section id="timeline" aria-labelledby="timeline-title">
+    <div class="section-heading"><span class="section-no">02</span><div><p class="eyebrow">{{MONTH_RANGE}} · RECENT MAJOR</p><h2 id="timeline-title">近期，发生了什么</h2></div><p>按发布日期回看，<br>后续更新写在同一条里。</p></div>
+    <ol class="timeline">{{TIMELINE}}</ol><p class="baseline-note">{{MONTH_COMPARE}}</p>
+  </section>
+  <section id="stories" aria-labelledby="stories-title">
+    <div class="section-heading"><span class="section-no">03</span><div><p class="eyebrow">TOP STORIES</p><h2 id="stories-title">这期重点</h2></div><p>{{STORIES_NOTE}}</p></div>{{STORIES}}
+  </section>
+  <section id="impact" class="impact-section" aria-labelledby="impact-title">
+    <div class="section-heading"><span class="section-no">04</span><div><p class="eyebrow">IMPACT RADAR</p><h2 id="impact-title">应用中的机会与待验证问题</h2></div><p>可能改善哪些能力，<br>部署前还需要检验什么。</p></div>
+    <div class="flow-figure"><div><h3>进现场之前，先测整套系统</h3><p class="caption">原创分析图：可靠性、节拍与安全需要同时检验。</p></div>{{FLOW}}</div>
+    <div class="impact-grid">{{IMPACT}}</div>
+    <div class="matrix-heading"><h3>本期重要技术 × 真实场景</h3><p>● 直接研究 / 产品对应　○ 潜在关联　— 本期无支持</p></div>
+    <p class="caption">矩阵说明本期资料与各场景的对应关系，不代表商业成熟度；“直接研究”也包括仿真与受控实验。</p>
+    <div class="matrix-scroll" tabindex="0" role="region" aria-label="技术与场景关联矩阵，可横向滚动"><table class="application-matrix"><thead><tr><th scope="col">技术信号</th>{{MATRIX_HEAD}}</tr></thead><tbody>{{MATRIX_ROWS}}</tbody></table></div>
+    <details class="matrix-reasons"><summary>关联判断依据</summary><ul>{{MATRIX_NOTES}}</ul></details>
+    <aside class="education-callout"><span class="eyebrow">课程作业也可以这样验收</span><h3>在实验报告中分析失败案例</h3><p>让机器人在不同房间或物理后端中执行同一任务，记录失败环节与恢复过程。学生宜先学习基础机器人学、控制和 ROS，再结合本期的记忆与世界模型研究设计专题实验。</p><a href="#learning">查看三个学习练习 ↗</a></aside>
+  </section>
+  <section id="industry" aria-labelledby="industry-title">
+    <div class="section-heading"><span class="section-no">05</span><div><p class="eyebrow">INDUSTRY / PRODUCT / OPEN SOURCE</p><h2 id="industry-title">行业与工具备忘</h2></div><p>尚未展开的消息，<br>以及相关官方入口。</p></div><details class="industry-register"><summary>查看 {{INDUSTRY_COUNT}} 项公司与工具进展</summary><div class="industry-grid">{{INDUSTRY}}</div></details>
+  </section>
+  <section id="research" aria-labelledby="research-title">
+    <div class="section-heading"><span class="section-no">06</span><div><p class="eyebrow">RESEARCH RADAR</p><h2 id="research-title">研究者接着追什么</h2></div><p>从预算、记忆和迁移，<br>各挑一个可复查的问题。</p></div>
+    <div class="research-layout"><aside class="theme-chart"><h3>本期精读样本的主题</h3>{{THEME}}</aside><div class="research-questions">{{RESEARCH}}</div></div>
+  </section>
+  <section id="papers" aria-labelledby="papers-title">
+    <div class="section-heading"><span class="section-no">07</span><div><p class="eyebrow">PAPERS WORTH READING</p><h2 id="papers-title">{{PAPER_COUNT}} 篇论文，按需展开</h2></div><p>方法、结果与局限，<br>收在精读笔记里。</p></div><div class="paper-grid">{{PAPERS}}</div>
+  </section>
+  <section id="learning" aria-labelledby="learning-title">
+    <div class="section-heading"><span class="section-no">08</span><div><p class="eyebrow">LEARNING CORNER</p><h2 id="learning-title">这周可以学什么</h2></div><p>{{LEARNING_COUNT}} 个概念，<br>各做一个小练习。</p></div><div class="learning-grid">{{LEARNING}}</div>
+  </section>
+  <section class="method-section" aria-label="来源与方法">
+    <details><summary><span>Sources &amp; Methodology</span><span>来源与核验详情 ＋</span></summary><div class="method-content"><p>{{METHODOLOGY}}</p><ul class="source-index">{{SOURCES}}</ul><details class="internal-audit"><summary>查看本期内部核验摘要</summary><pre>{{INTERNAL}}</pre></details></div></details>
+  </section>
+</main>
+<footer><div><strong>具身智能观察</strong><p>每周读几条消息，留几个值得追的问题。</p></div><div>{{WEEK}} · V{{VERSION}}<br>信息窗口 {{WEEK_RANGE}}<br><a href="#top">回到封面 ↑</a></div></footer>
+</body>
+</html>

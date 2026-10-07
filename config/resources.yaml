@@ -1,0 +1,10 @@
+resources:
+  - title: Berkeley CS285 深度强化学习
+    url: https://rail.eecs.berkeley.edu/deeprlcourse/
+    note: 可用于理解策略学习、离线强化学习与控制；按公开课程内容自学，不表示本周发布。
+  - title: MIT Underactuated Robotics
+    url: https://underactuated.mit.edu/
+    note: 控制、规划与机器人动力学公开教材，适合作为阅读学习型机器人论文的基础。
+  - title: Hugging Face LeRobot 文档
+    url: https://huggingface.co/docs/lerobot/index
+    note: 面向工程实践的机器人数据、训练与部署资料；先核对硬件与软件版本。

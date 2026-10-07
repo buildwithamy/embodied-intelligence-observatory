@@ -1,0 +1,1106 @@
+<title>全球具身智能观察 第1期</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600&display=swap">
+<style>
+/* Layout: white-canvas parchment magazine. White carries narrative; cream cards hold figures; two dark beats (scene map, deep case). 1200px frame, 720px reading column. */
+:root{
+  --canvas:#ffffff; --paper:#ffffff; --soft:#faf9f5; --cream:#f5f0e8; --card:#f5f0e8; --strong:#efe9de; --hover:#e8e0d2;
+  --band:#181715; --band-2:#252320; --band-3:#1f1e1b; --band-fg:#faf9f5; --band-body:#d6d1c7; --band-mute:#a09d96; --band-hair:#3a3631;
+  --hair:#e6dfd8; --hair-soft:#ebe6df;
+  --ink:#141413; --body:#3d3d3a; --muted:#6c6a64; --faint:#8e8b82;
+  --coral:#cc785c; --coral-ink:#a9583e; --coral-wash:#f8ebe4; --teal:#5db8a6; --amber:#e8a55a;
+  --d1:#c2643f; --d2:#139a88; --cta-bg:#a9583e; --cta-fg:#ffffff;
+  --ok:#3d7a4f; --ok-bg:#e6f1e6; --self:#8a6414; --self-bg:#f6edd6; --news:#5a5852; --news-bg:#efebe5; --ed:#7a4b8c; --ed-bg:#f1e8f3; --gap:#d9d3c9;
+  --f-disp:"Noto Serif SC","Source Serif 4",Georgia,serif;
+  --f-body:Inter,"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --canvas:#181715; --paper:#1f1e1b; --soft:#1f1e1b; --cream:#2d2a26; --card:#252320; --strong:#2d2a26; --hover:#34312c;
+  --band:#0f0e0d; --band-2:#1f1e1b; --band-3:#181715; --band-fg:#faf9f5; --band-body:#d6d1c7; --band-mute:#a09d96; --band-hair:#34312c;
+  --hair:#34312c; --hair-soft:#2b2925;
+  --ink:#faf9f5; --body:#d6d1c7; --muted:#a09d96; --faint:#86837b;
+  --coral:#d98a6e; --coral-ink:#e8a58a; --coral-wash:#36261f; --teal:#5db8a6; --amber:#e8a55a;
+  --d1:#d4704a; --d2:#1fa58e; --cta-bg:#d98a6e; --cta-fg:#181715;
+  --ok:#9fd0a8; --ok-bg:#1f2c22; --self:#e6c27a; --self-bg:#2f2817; --news:#c9c4ba; --news-bg:#2b2925; --ed:#d6b3e2; --ed-bg:#2e2433; --gap:#3a3631;
+  color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --canvas:#181715; --paper:#1f1e1b; --soft:#1f1e1b; --cream:#2d2a26; --card:#252320; --strong:#2d2a26; --hover:#34312c;
+  --band:#0f0e0d; --band-2:#1f1e1b; --band-3:#181715; --band-fg:#faf9f5; --band-body:#d6d1c7; --band-mute:#a09d96; --band-hair:#34312c;
+  --hair:#34312c; --hair-soft:#2b2925;
+  --ink:#faf9f5; --body:#d6d1c7; --muted:#a09d96; --faint:#86837b;
+  --coral:#d98a6e; --coral-ink:#e8a58a; --coral-wash:#36261f; --teal:#5db8a6; --amber:#e8a55a;
+  --d1:#d4704a; --d2:#1fa58e; --cta-bg:#d98a6e; --cta-fg:#181715;
+  --ok:#9fd0a8; --ok-bg:#1f2c22; --self:#e6c27a; --self-bg:#2f2817; --news:#c9c4ba; --news-bg:#2b2925; --ed:#d6b3e2; --ed-bg:#2e2433; --gap:#3a3631;
+  color-scheme:dark;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--canvas);color:var(--body);font-family:var(--f-body);font-size:16px;line-height:1.75}
+a{color:var(--coral-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--coral);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4,h5{color:var(--ink);text-wrap:balance;margin:0}
+p{margin:0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.frame{max-width:1200px;margin:0 auto;padding-inline:24px}
+@media (max-width:600px){.frame{padding-inline:16px}}
+.col{max-width:740px}
+.band{padding-block:88px}
+@media (max-width:700px){.band{padding-block:56px}}
+.b-white{background:var(--canvas)} .b-soft{background:var(--soft)} .b-cream{background:var(--cream)}
+.b-dark{background:var(--band);color:var(--band-body)}
+.b-dark h2,.b-dark h3,.b-dark h4,.b-dark h5,.b-dark strong,.b-dark b{color:var(--band-fg)}
+.art{color:var(--ink)} .art svg{display:block;width:100%;height:auto}
+.b-dark .art{color:var(--band-fg);--muted:var(--band-mute);--cream:var(--band-2);--paper:var(--band-3)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--canvas) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+.nav .frame{display:flex;align-items:center;gap:8px 22px;min-height:56px;flex-wrap:wrap;padding-block:6px}
+.mark{font-family:var(--f-disp);font-size:18px;color:var(--ink);white-space:nowrap}
+.mark i{font-style:normal;color:var(--coral)}
+.links{display:flex;gap:4px 16px;flex-wrap:wrap;font-size:14px;font-weight:500}
+.links a{color:var(--muted);text-decoration:none}
+.links a:hover{color:var(--ink)}
+.links a.deep{color:var(--coral-ink)}
+.roles{margin-left:auto;display:flex;gap:2px;background:var(--cream);padding:3px;border-radius:9999px}
+.roles button{font:500 13px/1 var(--f-body);color:var(--muted);background:transparent;border:0;border-radius:9999px;padding:8px 12px;cursor:pointer}
+.roles button[aria-pressed="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px rgba(20,20,19,.08)}
+@media (max-width:980px){.links{display:none}.roles{margin-left:0}}
+
+/* cover */
+.cover{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,11fr);gap:48px;align-items:center;padding-block:56px 36px}
+@media (max-width:900px){.cover{grid-template-columns:minmax(0,1fr);gap:20px;padding-block:36px 24px}}
+.eyebrow{font:500 12px/1.4 var(--f-body);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.pill{display:inline-block;font:500 11.5px/1 var(--f-body);padding:5px 9px;border-radius:9999px;background:var(--cta-bg);color:var(--cta-fg);letter-spacing:.5px;vertical-align:1px}
+.cover h1 .nw{display:inline-block}
+@media (max-width:600px){.cover .art{margin-inline:-8px}}
+.cover h1{font-family:var(--f-disp);font-weight:400;font-size:clamp(32px,3.6vw,48px);line-height:1.15;letter-spacing:-1px;margin-block:16px 18px}
+.cover h1 em{font-style:normal;color:var(--coral-ink)}
+.cover .lede{font-size:17px;line-height:1.85;color:var(--body)}
+.cover-meta{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:20px;font-size:13px;color:var(--muted)}
+.cover-meta b{color:var(--ink);font-weight:500}
+.strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);margin-top:8px}
+.strip .n{padding:16px 16px 14px 0;min-width:0}
+.strip .n + .n{padding-left:16px;border-left:1px solid var(--hair)}
+.strip .v{font-family:var(--f-mono);font-size:26px;font-weight:500;color:var(--ink);letter-spacing:-.5px;line-height:1.15}
+.strip .k{font-size:13.5px;color:var(--ink);margin-top:6px;font-weight:500;line-height:1.45}
+.strip .c{display:inline-block;margin-top:6px;font-size:11.5px;color:var(--coral-ink);background:var(--coral-wash);padding:2px 7px;border-radius:9999px}
+@media (max-width:900px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.strip .n,.strip .n + .n{padding:14px 12px 12px 0;border-left:0;border-top:1px solid var(--hair-soft)}}
+.deeplink{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-top:22px;background:var(--cta-bg);color:var(--cta-fg);border-radius:12px;padding:16px 20px;text-decoration:none}
+.deeplink b{font-family:var(--f-disp);font-weight:500;font-size:18px;color:inherit}
+.deeplink span{font-size:13.5px;opacity:.92}
+.deeplink:hover{opacity:.92}
+
+/* section heads */
+.sh{display:grid;gap:10px;margin-bottom:34px;max-width:780px}
+.sh .no{font-family:var(--f-mono);font-size:13px;color:var(--coral-ink)}
+.b-dark .sh .no{color:var(--coral)}
+.sh h2{font-family:var(--f-disp);font-weight:400;font-size:clamp(28px,3.8vw,42px);line-height:1.18;letter-spacing:-.6px}
+.sh p{color:var(--muted);font-size:15.5px}
+.b-dark .sh p{color:var(--band-mute)}
+.sub-h{font-family:var(--f-disp);font-weight:500;font-size:22px;margin-bottom:16px;color:var(--ink)}
+.b-dark .sub-h{color:var(--band-fg)}
+
+/* evidence */
+.ev{display:inline-flex;align-items:center;gap:5px;font:500 11.5px/1 var(--f-body);padding:5px 8px;border-radius:9999px;white-space:nowrap}
+.ev.o{color:var(--ok);background:var(--ok-bg)} .ev.s{color:var(--self);background:var(--self-bg)} .ev.n{color:var(--news);background:var(--news-bg)} .ev.e{color:var(--ed);background:var(--ed-bg)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:12.5px;color:var(--muted)}
+.meta .d{font-family:var(--f-mono)}
+.src{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;margin-top:10px}
+
+/* figure */
+.fig{margin:0 0 28px;background:var(--soft);border:1px solid var(--hair);border-radius:16px;padding:24px 24px 18px}
+.b-soft .fig,.b-cream .fig{background:var(--paper)}
+.fig h4{font-family:var(--f-disp);font-weight:500;font-size:19px;margin-bottom:4px}
+.fig .sub{font-size:13.5px;color:var(--muted);margin-bottom:14px}
+.fig .cap{font-size:12.5px;color:var(--faint);margin-top:12px;line-height:1.65}
+.b-dark .fig{background:var(--band-2);border-color:var(--band-hair)}
+.b-dark .fig .sub,.b-dark .fig .cap{color:var(--band-mute)}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+svg text{font-family:var(--f-body)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted);margin-bottom:8px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:11px;height:11px;display:inline-block}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--canvas);font-size:12.5px;line-height:1.5;padding:7px 10px;border-radius:6px;max-width:300px}
+
+/* ladder */
+.ladder{display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:stretch}
+.rung .lab{display:flex;flex-direction:column;justify-content:center;padding:10px 14px;border-radius:10px;background:var(--strong);color:var(--ink);font-weight:600;font-size:14.5px;line-height:1.35}
+.rung .lab small{font-weight:400;font-size:11.5px;color:var(--muted);margin-top:3px}
+.rung:nth-child(1) .lab{margin-right:0;background:var(--coral);color:#fff}
+.rung:nth-child(1) .lab small{color:#fff;opacity:.85}
+.rung:nth-child(2) .lab{background:color-mix(in srgb,var(--coral) 55%,var(--strong))}
+.rung:nth-child(3) .lab{background:color-mix(in srgb,var(--coral) 30%,var(--strong))}
+.rung .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:6px 0;border-bottom:1px dashed var(--hair);min-width:0}
+.nb{display:inline-flex;flex-direction:column;gap:2px;padding:8px 12px;border-radius:10px;background:var(--paper);border:1px solid var(--hair);min-width:0;max-width:100%}
+.nb b{font-family:var(--f-mono);font-weight:500;font-size:15px;color:var(--ink)}
+.nb span{font-size:12.5px;color:var(--muted);line-height:1.45}
+.nb.gapcell{border-style:dashed;background:transparent}
+.nb.gapcell b{color:var(--faint)}
+.ladder-note{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:end;margin-top:14px}
+@media (max-width:640px){.rung{grid-template-columns:minmax(0,1fr);gap:6px}}
+
+/* briefs */
+.briefs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.brief{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 14px;padding-block:16px;border-top:1px solid var(--hair);align-items:start}
+.brief .ic{width:44px;height:44px;border-radius:10px;background:var(--cream);color:var(--ink);display:grid;place-items:center}
+.brief .ic svg{width:30px;height:30px}
+.brief .ic.t{font-family:var(--f-mono);font-size:13px;color:var(--coral-ink)}
+.brief p{font-size:15px;line-height:1.7}
+.brief p b{color:var(--ink);font-weight:600}
+.brief .tag{grid-column:2;font-size:12px;color:var(--faint)}
+@media (max-width:760px){.briefs{grid-template-columns:minmax(0,1fr)}}
+
+/* stories */
+.story{padding-block:30px;border-top:1px solid var(--hair)}
+.story.first{border-top:0;padding-top:4px}
+.story h3{font-family:var(--f-disp);font-weight:500;font-size:24px;line-height:1.4;letter-spacing:-.3px;margin-block:10px 12px}
+.story .txt{max-width:760px}
+.impact{display:inline-block;font-family:var(--f-mono);font-size:12px;color:var(--coral-ink);background:var(--coral-wash);padding:3px 8px;border-radius:4px}
+.lens{margin:16px 0 0;max-width:760px;border-radius:12px;background:var(--cream);padding:4px 18px}
+.lens .r{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding-block:10px;border-top:1px solid var(--hair)}
+.lens .r:first-child{border-top:0}
+.lens dt{font-weight:600;font-size:13.5px;color:var(--ink)}
+.lens dd{margin:0;font-size:14.5px;line-height:1.7}
+.b-dark .lens{background:var(--band-2)} .b-dark .lens .r{border-color:var(--band-hair)} .b-dark .lens dd{color:var(--band-body)}
+body[data-role]:not([data-role="all"]) .lens .r{display:none}
+body[data-role="dev"] .lens .r[data-r="dev"],body[data-role="pm"] .lens .r[data-r="pm"],body[data-role="edu"] .lens .r[data-r="edu"]{display:grid}
+@media (max-width:520px){.lens .r{grid-template-columns:minmax(0,1fr);gap:2px}}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:760px}
+.tbl th{white-space:nowrap;text-align:left;font-size:12px;font-weight:500;color:var(--muted);padding:10px 14px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl td{padding:12px 14px 12px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.tbl td b{color:var(--ink);font-weight:600}
+.tbl small{color:var(--faint)}
+.b-dark .tbl th{color:var(--band-mute);border-color:var(--band-fg)} .b-dark .tbl td{border-color:var(--band-hair)}
+.tbl td.st-yes,.tbl td.st-part,.tbl td.st-no{white-space:nowrap}
+.st-yes{color:var(--ok);font-weight:600}.st-part{color:var(--self);font-weight:600}.st-no{color:var(--faint);font-weight:600}
+
+/* scene matrix (dark) */
+.matrix{display:grid;grid-template-columns:170px repeat(4,minmax(150px,1fr));min-width:820px;border-top:1px solid var(--band-hair)}
+.matrix > div{padding:10px;border-bottom:1px solid var(--band-hair);border-left:1px solid var(--band-hair);min-width:0}
+.matrix .h{font-size:12px;color:var(--band-mute);font-weight:500;background:var(--band-3);border-left:0}
+.matrix .h.st{border-left:1px solid var(--band-hair)}
+.matrix .h .stage{display:block;font-family:var(--f-mono);font-size:11px;opacity:.7}
+.matrix .s{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--band-fg);font-size:14px;border-left:0}
+.matrix .s .si{width:32px;height:32px;flex:none;color:var(--band-fg)}
+.matrix .s.adj{color:var(--band-mute);font-weight:500}
+.chip{display:block;font-size:12.5px;line-height:1.45;padding:7px 9px;margin:0 0 6px;border-radius:8px;background:var(--band-2);border:1px solid var(--band-hair);color:var(--band-body)}
+.chip b{color:var(--band-fg);font-weight:600}
+.chip.new{box-shadow:inset 3px 0 0 var(--coral)}
+.chip.plan{border-style:dashed}
+.chip small{display:block;color:var(--band-mute);font-size:11.5px}
+.tv{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:9999px;margin-left:4px;vertical-align:1px;border:1px solid currentColor}
+.tv.show{color:#e8a55a}.tv.assist{color:#5db8a6}.tv.prod{color:#e8a58a}
+.matrix .s{position:sticky;left:0;z-index:1;background:var(--band)}
+@media (max-width:600px){.matrix{grid-template-columns:96px repeat(4,minmax(150px,1fr))}.matrix .s{flex-direction:column;align-items:flex-start;font-size:13px}}
+.mlegend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--band-mute);margin-bottom:12px}
+
+/* evidence cards */
+.ecards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.ecards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.ecards{grid-template-columns:minmax(0,1fr)}}
+.ec{background:var(--paper);border:1px solid var(--hair);border-radius:14px;padding:18px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.ec h4{font-size:16px;font-weight:600;line-height:1.45}
+.ec p{font-size:13.5px;line-height:1.7}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:4px}
+.cell{border-radius:8px;padding:7px 8px;background:var(--cream);min-width:0}
+.cell i{display:block;font-style:normal;font-size:11px;color:var(--muted)}
+.cell b{display:block;font-family:var(--f-mono);font-weight:500;font-size:13px;color:var(--ink);line-height:1.35;word-break:break-word}
+.cell.x{background:repeating-linear-gradient(135deg,var(--cream) 0 6px,var(--paper) 6px 12px);border:1px dashed var(--gap)}
+.cell.x b{color:var(--faint);font-family:var(--f-body);font-size:12px}
+.score{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.score .bar{flex:1;height:6px;border-radius:9999px;background:var(--hair);overflow:hidden}
+.score .bar i{display:block;height:100%;background:var(--d2)}
+
+/* ledger of promises */
+.promise{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid var(--hair)}
+.pr{display:grid;grid-template-columns:180px minmax(0,1fr) 110px;gap:16px;padding-block:12px;border-bottom:1px solid var(--hair);align-items:center}
+.pr .who{font-weight:600;color:var(--ink);font-size:14.5px}
+.pr .what{font-size:14px}
+.pr .what small{display:block;color:var(--faint);font-size:12px}
+.stamp{justify-self:start;font:500 12px/1 var(--f-body);padding:6px 10px;border-radius:6px;border:1.5px solid currentColor;transform:rotate(-2deg)}
+.stamp.late{color:var(--d1)} .stamp.track{color:var(--muted)} .stamp.claim{color:var(--self)}
+@media (max-width:640px){.pr{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+/* products */
+.pcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:1000px){.pcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.pcards{grid-template-columns:minmax(0,1fr)}}
+.pc{background:var(--paper);border:1px solid var(--hair);border-radius:16px;padding:0 0 18px;display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.pc .sil{background:var(--cream);color:var(--ink);height:190px;display:grid;place-items:center;padding:10px}
+.pc .sil svg{height:170px;width:auto}
+.pc .body{padding:16px 18px 0;display:flex;flex-direction:column;gap:8px;flex:1}
+.pc .type{font:500 11.5px/1 var(--f-body);letter-spacing:1px;color:var(--muted);text-transform:uppercase}
+.pc h4{font-family:var(--f-disp);font-weight:500;font-size:21px}
+.pc .price{font-family:var(--f-mono);font-size:14.5px;color:var(--coral-ink)}
+.pc table{width:100%;border-collapse:collapse;font-size:13px}
+.pc td{padding:5px 0;border-top:1px solid var(--hair-soft);vertical-align:top}
+.pc td:first-child{color:var(--faint);width:5.6em;white-space:nowrap;padding-right:10px}
+.pc td.na{color:var(--faint)}
+.pc .note{font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:6px}
+
+/* hand annotation */
+.anno{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+.anno .art{max-width:220px}
+.anno ol{margin:0;padding-left:20px;font-size:14.5px;line-height:1.8}
+@media (max-width:640px){.anno{grid-template-columns:minmax(0,1fr)}}
+
+/* lists */
+.items{display:grid;gap:22px}
+.item h4{font-size:17px;font-weight:600;line-height:1.5;margin-block:6px}
+.item p{font-size:15px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.two > *{min-width:0}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr);gap:36px}}
+.callout{border-radius:14px;background:var(--coral-wash);padding:18px 20px;font-size:15px}
+.callout b{color:var(--ink)}
+.try{display:grid;gap:12px;counter-reset:t}
+.try li{list-style:none;background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;font-size:14.5px}
+.try li b{color:var(--ink)}
+.try li small{display:block;color:var(--muted);font-size:12.5px;margin-top:4px}
+.try ol{padding:0;margin:0;display:grid;gap:12px}
+
+/* edu */
+.cal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.cal{grid-template-columns:minmax(0,1fr)}}
+.cd{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:14px}
+.cd .date{background:var(--cta-bg);color:var(--cta-fg);border-radius:8px;text-align:center;padding:8px 4px;font-family:var(--f-mono);font-size:12px;line-height:1.3}
+.cd .date b{display:block;font-size:20px;color:inherit;font-weight:500}
+.cd h5{font-size:14.5px;font-weight:600;line-height:1.45}
+.cd p{font-size:13px;color:var(--muted);line-height:1.6;margin-top:4px}
+.recipe{background:var(--paper);border:1px solid var(--hair);border-radius:16px;padding:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+@media (max-width:760px){.recipe{grid-template-columns:minmax(0,1fr)}}
+.recipe h5{font-size:15px;font-weight:600;margin-bottom:6px}
+.recipe ol,.recipe ul{margin:0;padding-left:20px;font-size:14px;line-height:1.75}
+.recipe .k{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.recipe .k span{font-size:12px;background:var(--cream);padding:3px 9px;border-radius:9999px;color:var(--ink)}
+
+/* storyline timeline */
+.tl{position:relative;display:grid;gap:18px;padding-left:22px;border-left:2px solid var(--hair)}
+.tl .e{position:relative}
+.tl .e::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--coral)}
+.tl .e.new::before{background:var(--coral)}
+.tl h5{font-size:15.5px;font-weight:600}
+.tl h5 small{font-family:var(--f-mono);font-weight:400;font-size:12px;color:var(--faint);margin-left:6px}
+.tl p{font-size:14.5px}
+.paper{border-top:1px solid var(--hair);padding-block:14px}
+.paper h5{font-size:15.5px;font-weight:600}
+.paper h5 a{color:var(--ink);text-decoration-color:var(--hair)}
+.paper .hook{font-family:var(--f-mono);font-size:13px;color:var(--coral-ink);margin-block:4px}
+.paper p{font-size:14px}
+.paper .rp{font-size:12px;color:var(--faint);margin-top:4px}
+
+/* case */
+.case-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+@media (max-width:900px){.case-grid{grid-template-columns:minmax(0,1fr)}}
+.book h5{font-family:var(--f-disp);font-weight:500;font-size:18px;margin-bottom:10px}
+.book dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;margin:0;font-size:14px}
+.book dt{color:var(--band-body)} .book dd{margin:0;font-family:var(--f-mono);color:var(--band-fg);text-align:right}
+.book .tot{border-top:1px solid var(--band-hair);padding-top:8px}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+@media (max-width:860px){.calc{grid-template-columns:minmax(0,1fr)}}
+.ctl{display:grid;gap:14px}
+.ctl label{display:grid;gap:6px;font-size:13.5px;color:var(--band-body)}
+.ctl .lv{display:flex;justify-content:space-between;gap:10px}
+.ctl .lv output{font-family:var(--f-mono);color:var(--band-fg)}
+.ctl input[type=range]{width:100%;accent-color:var(--coral)}
+.out{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.out div{background:var(--band-3);border:1px solid var(--band-hair);border-radius:12px;padding:14px}
+.out i{display:block;font-style:normal;font-size:12px;color:var(--band-mute)}
+.out b{display:block;font-family:var(--f-mono);font-size:22px;font-weight:500;color:var(--band-fg);margin-top:4px}
+.btn{font:500 13px/1 var(--f-body);background:transparent;color:var(--band-fg);border:1px solid var(--band-hair);border-radius:8px;padding:9px 12px;cursor:pointer}
+.btn:hover{background:var(--band-2)}
+.lessons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.lessons{grid-template-columns:minmax(0,1fr)}}
+.lesson{border-top:2px solid var(--coral);padding-top:12px}
+.lesson h5{font-size:15.5px;font-weight:600;margin-bottom:6px}
+.lesson p{font-size:14.5px;line-height:1.7}
+.risk{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+@media (max-width:900px){.risk{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.risk div{background:var(--band-2);border:1px solid var(--band-hair);border-radius:10px;padding:12px;font-size:13.5px;line-height:1.6}
+.risk b{display:block;margin-bottom:4px;font-size:14px}
+details.more{margin-top:14px}
+details.more summary{cursor:pointer;color:var(--coral-ink);font-size:14px;font-weight:500}
+.b-dark details.more summary{color:#e8a58a}
+.eng{font-family:"Source Serif 4",Georgia,serif;font-size:16px;line-height:1.7;padding-left:18px}
+.eng li{margin-bottom:6px}
+.foot{padding-block:36px;font-size:13px;color:var(--band-mute);background:var(--band)}
+.foot .frame{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+
+.toc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;margin-top:20px}
+.toc a{display:flex;gap:12px;align-items:baseline;padding:13px 0;border-top:1px solid var(--hair);color:var(--ink);text-decoration:none;font-size:15px;line-height:1.5}
+.toc a i{font-style:normal;font-size:12px;color:var(--coral-ink);font-weight:600;min-width:3.6em;letter-spacing:.5px}
+.toc a:hover{color:var(--coral-ink)}
+@media (max-width:900px){.toc{grid-template-columns:minmax(0,1fr)}}
+.pc .hook{font-size:14px;color:var(--ink);line-height:1.65}
+.aside{font-size:14px;color:var(--muted);max-width:760px;margin-top:18px}
+.b-dark .aside{color:var(--band-mute)}
+</style>
+
+<nav class="nav" aria-label="本期导航">
+  <div class="frame">
+    <span class="mark">全球具身智能观察<i> · </i>第 1 期</span>
+    <div class="links">
+      <a href="#capital">格局</a><a href="#products">产品</a><a href="#ladder">一张图</a><a href="#scenes">场景</a><a href="#tech">技术</a><a href="#edu">教育</a><a href="#research">研究</a><a href="#case" class="deep">深度 ↓</a>
+    </div>
+    <div class="roles" role="group" aria-label="按角色阅读">
+      <button type="button" id="r-all" data-role="all" aria-pressed="true">全部</button>
+      <button type="button" id="r-dev" data-role="dev" aria-pressed="false">研发</button>
+      <button type="button" id="r-pm" data-role="pm" aria-pressed="false">产品与项目</button>
+      <button type="button" id="r-edu" data-role="edu" aria-pressed="false">教育</button>
+    </div>
+  </div>
+</nav>
+
+<!-- COVER -->
+<header class="b-white">
+  <div class="frame">
+    <div class="cover">
+      <div>
+        <div class="eyebrow">双周刊 · 第 1 期 · 2026.09.24 – 10.07 &nbsp;<span class="pill">样刊</span></div>
+        <h1>人形机器人落地的两本账：<span class="nw">中国在<em>数台数</em>，</span><span class="nw">美国在<em>算单台账</em></span></h1>
+        <p class="lede">国庆前后，智元把 300 多台机器人送进长隆，又在 100 家门店各放了一台；银河通用的新品上线一天，预订过了 200 台。太平洋另一边，Agility 把 Digit 的账摊开给投资人看：月费 8,500 美元，1,000 台订单要一项技能一项技能地兑现。两本账都缺同一页：这些机器人每天到底干了多少活。</p>
+      </div>
+      <div class="art" role="img" aria-label="左边是成排的机器人和计数器，右边是一台工业人形和账本">{{svg:hero_v2}}</div>
+    </div>
+    <div class="strip">
+      <div class="n"><div class="v">300+</div><div class="k">智元送进长隆的机器人</div><span class="c">部署</span></div>
+      <div class="n"><div class="v">200+</div><div class="k">银河通用 ET1 首日预订</div><span class="c">预订</span></div>
+      <div class="n"><div class="v">≈2.5 万</div><div class="k">上半年全球人形出货</div><span class="c">出货 · IDC</span></div>
+      <div class="n"><div class="v">1,000</div><div class="k">Digit 订单，按技能兑现</div><span class="c">订单</span></div>
+      <div class="n"><div class="v">$8,500</div><div class="k">一台 Digit 的月租</div><span class="c">价格</span></div>
+    </div>
+    <nav class="toc" aria-label="本期看点">
+      <a href="#capital"><i>格局</i>AMD 82 亿美元买下李飞飞的 World Labs</a>
+      <a href="#products"><i>产品</i>一张人形价格表：7.9 万元到 20 万美元</a>
+      <a href="#ladder"><i>一张图</i>你看到的“台数”，停在哪一级</a>
+      <a href="#scenes"><i>场景</i>十个场景，谁走到了小批量</a>
+      <a href="#tech"><i>技术</i>这两周能上手的三件事</a>
+      <a href="#case"><i>深度</i>Digit 的两本账，附计算器</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 01 CAPITAL -->
+<section class="band b-cream" id="capital">
+  <div class="frame">
+    <div class="sh"><span class="no">01 · 格局</span><h2>芯片巨头下场，工具箱换了主人</h2><p>两周里最重要的交易和人事。排序看对行业的影响，金额其次。</p></div>
+    <figure class="fig">
+      <h4>交易地图</h4>
+      <div class="sub">09.17–10.07 · 纵轴为金额（对数刻度）· 灰底为本期窗口之前的一周</div>
+      <div class="legend"><span><i class="sw" style="background:var(--d1);border-radius:50%"></i>并购</span><span><i class="sw" style="background:var(--d2)"></i>融资 / 战略投资</span><span><i class="sw" style="border:2px solid var(--ink);transform:rotate(45deg) scale(.8)"></i>上市</span></div>
+      <div class="scroll"><svg id="deal" viewBox="0 0 900 340" style="display:block;width:100%;min-width:680px;height:auto" role="img" aria-label="资本事件按日期和金额分布"></svg></div>
+    </figure>
+
+    <article class="story first">
+      <div class="meta"><span class="impact">影响 No.1</span><span class="d">09.28</span><span class="ev o">官方</span></div>
+      <h3>AMD 买下 World Labs：做芯片的，开始自己养世界模型</h3>
+      <div class="txt"><p>9 月 28 日，AMD 宣布以约 82 亿美元股票收购李飞飞创办的 World Labs。三周前，这家公司刚发布空间模型 Atlas，能把文字、图片、视频和 3D 放进同一个空间里理解和生成。两家早就在 AMD 的 GPU 上一起训练模型，这次干脆合为一家。AMD 的算盘很清楚：先弄懂机器人和仿真要什么样的算力，再回头设计芯片和软件。交易预计年底前完成。</p></div>
+      <dl class="lens">
+        <div class="r" data-r="dev"><dt>研发</dt><dd>世界模型这条线，过去几乎只有 NVIDIA 一种跑法。ROCm 上接下来会多出一批空间模型和仿真工具，值得留一只眼睛。</dd></div>
+        <div class="r" data-r="pm"><dt>产品与项目</dt><dd>手上的选型不用动。2027 年做算力采购评审时，看 AMD 有没有拿出成套的机器人软硬件方案。</dd></div>
+        <div class="r" data-r="edu"><dt>教育</dt><dd>拿来讲一堂课正合适：芯片公司为什么要买模型公司，算力、模型、仿真谁离不开谁。</dd></div>
+      </dl>
+      <div class="src"><a href="https://newsroom.amd.com/news/amd-acquire-world-labs/">AMD 公告</a><a href="https://www.worldlabs.ai/blog/amd-announcement">World Labs 公告</a><a href="https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000182/amd-20260926.htm">AMD 8-K</a></div>
+    </article>
+
+    <article class="story">
+      <div class="meta"><span class="impact">影响 No.2</span><span class="d">09.18–09.23</span><span>窗口前一周</span><span class="ev o">高通、Cognex 官方</span></div>
+      <h3>MoveIt 和 RealSense，同一周换了主人</h3>
+      <div class="txt"><p>机器人开发者最常打开的两样工具，在本期开始前一周相继易主。高通收购 MoveIt 的主要维护者 PickNik，承诺 MoveIt 继续开源，并会和自家 Dragonwing 平台、Arduino 开发板打通。Cognex 花约 5 亿美元买下 RealSense，深度相机并入工业视觉产品线。同一周，软银从现代汽车手里接过 Marc Raibert 的 RAI Institute，交易还在等美国外资审查。</p></div>
+      <dl class="lens">
+        <div class="r" data-r="dev"><dt>研发</dt><dd>代码短期不会变。真正要盯的是发版节奏和驱动维护，依赖这两样的项目，现在就该把备选方案列出来。</dd></div>
+        <div class="r" data-r="pm"><dt>产品与项目</dt><dd>把 MoveIt 和 RealSense 写进供应商风险清单，新合同里注明 SDK 支持年限。</dd></div>
+        <div class="r" data-r="edu"><dt>教育</dt><dd>课照常上。用 RealSense 的实验室，采购时把 SDK 支持年限写进合同，再备一套替代相机的实验。</dd></div>
+      </dl>
+      <div class="src"><a href="https://www.qualcomm.com/news/releases/2026/09/qualcomm-to-acquire-picknik-to-advance-the-future-of-open-roboti">高通公告</a><a href="https://investor.cognex.com/news/news-details/2026/Cognex-to-Acquire-RealSense-Expanding-Machine-Vision-Leadership-into-High-Growth-Robotic-Perception-Market/default.aspx">Cognex 公告</a><a href="https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/">The Robot Report：软银 / RAI</a></div>
+    </article>
+
+    <article class="story">
+      <div class="meta"><span class="impact">影响 No.3</span><span class="d">10.06</span><span class="ev n">媒体</span></div>
+      <h3>Boston Dynamics 请来亚马逊的 AI 掌门人</h3>
+      <div class="txt"><p>新 CEO Rohit Prasad 10 月 7 日上任。他在亚马逊做了 12 年，带过 Alexa，也管过 AGI。一家靠运动控制成名的公司，把方向盘交给大模型出身的人，信号不难读：接下来要把 Atlas 做成能卖、能交付的产品。同一周，Boston Dynamics 在宣传片里给 Atlas 定了“两年回本”的目标，又发布了一只去掉小指的四指新手。</p></div>
+      <dl class="lens">
+        <div class="r" data-r="dev"><dt>研发</dt><dd>Atlas 的软件栈大概率会更偏基础模型和数据闭环。</dd></div>
+        <div class="r" data-r="pm"><dt>产品与项目</dt><dd>“两年回本”是宣传口径。谈项目时，请供应商按你的班次和节拍重新算一遍，写进投标附件。</dd></div>
+        <div class="r" data-r="edu"><dt>教育</dt><dd>头部公司换帅，换掉的是能力画像：AI 背景正在成为机器人公司掌舵人的标配。</dd></div>
+      </dl>
+      <div class="src"><a href="https://www.therobotreport.com/boston-dynamics-appoints-former-amazon-executive-rohit-prasad-new-ceo/">The Robot Report</a><a href="https://www.humanoidsdaily.com/news/boston-dynamics-atlas-film-two-year-payback">Humanoids Daily</a></div>
+    </article>
+
+    <article class="story">
+      <div class="meta"><span class="impact">还有这些</span></div>
+      <div class="scroll" style="margin-top:12px">
+      <table class="tbl">
+        <thead><tr><th>日期</th><th>谁</th><th>金额</th><th>为什么值得知道</th><th>来源</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">09.30</td><td><b>软银 → ASI</b><br><small>工地自主车队</small></td><td class="mono">$225M</td><td>一套系统指挥不同品牌的推土机、压路机、自卸车，大型基建工地开始“无人编队”。</td><td><span class="ev n">媒体</span></td></tr>
+          <tr><td class="mono">10.01</td><td><b>Maven Robotics</b><br><small>A 轮 · 轮式双臂</small></td><td class="mono">$100M</td><td>成立两年，先拿下码垛和搬运的长期合同，再融资扩产。</td><td><span class="ev n">媒体</span></td></tr>
+          <tr><td class="mono">10.01</td><td><b>日立 × Agile Robots</b><br><small>工厂合作</small></td><td class="mono">—</td><td>德国人形 Agile ONE 进日立的上下料和装配线，订单尚未披露。</td><td><span class="ev n">媒体</span></td></tr>
+          <tr><td class="mono">09.28</td><td><b>SiMa.ai</b><br><small>C 轮 · 端侧芯片</small></td><td class="mono">$150M</td><td>人形是目标市场之一，端侧推理芯片多了一个选项。</td><td><span class="ev o">官方</span></td></tr>
+          <tr><td class="mono">09.30</td><td><b>FORT Robotics</b><br><small>SPAC 上市</small></td><td class="mono">≈$557M</td><td>给 Digit 5 做外部安全接口的公司，机器人安全开始有了独立供应商。</td><td><span class="ev n">媒体</span></td></tr>
+          <tr><td class="mono">10.05</td><td><b>Teradyne → Bright Machines</b><br><small>战略投资</small></td><td class="mono">未披露</td><td>UR 协作臂、测试设备和微工厂连成一条线，专做 AI 服务器这类基础设施的制造。</td><td><span class="ev n">媒体</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="src"><a href="https://www.therobotreport.com/tackling-construction-labor-shortages-asi-softbank-partner-autonomous-fleets/">ASI</a><a href="https://www.therobotreport.com/how-maven-robotics-plans-automate-industrial-work-one-task-at-a-time/">Maven</a><a href="https://www.humanoidsdaily.com/news/agile-robots-hitachi-physical-ai-manufacturing">日立 × Agile Robots</a><a href="https://robottoday.com/article/robottoday-weekly-september-28-october-2-2026">RobotToday</a><a href="https://www.therobotreport.com/teradyne-invests-ibright-machines-brings-robotics-ai-infrastructure-manufacturing/">Teradyne</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- 02 PRODUCTS -->
+<section class="band b-white" id="products">
+  <div class="frame">
+    <div class="sh"><span class="no">02 · 产品</span><h2>一张人形价格表：7.9 万元到 20 万美元</h2><p>左边是门店迎宾和实验室里的研发平台，右边是按月出租的仓库搬运工。中间这道沟，就是两种生意的距离。</p></div>
+
+    <figure class="fig">
+      <h4>人形机器人：售价和成本</h4>
+      <div class="sub">美元，对数刻度 · 人民币按 1 美元 ≈ 7.1 元折算 · 售价与物料成本分两组</div>
+      <div class="legend"><span><i class="sw" style="background:var(--d1);border-radius:50%"></i>公开售价</span><span><i class="sw" style="border:2px solid var(--d2);border-radius:50%"></i>物料成本（BOM）</span></div>
+      <div class="scroll"><svg id="price" viewBox="0 0 900 360" style="display:block;width:100%;min-width:680px;height:auto" role="img" aria-label="人形机器人售价与物料成本"></svg></div>
+      <div class="cap">Agility 直售价约 20 万美元，出自 <a href="https://www.therobotreport.com/agility-robotics-reports-18m-revenue-ahead-of-humanoid-spac/">The Robot Report</a> 对其上市文件的整理。</div>
+    </figure>
+
+    <div class="pcards">
+      <div class="pc"><div class="sil">{{svg:robot-humanoid-small}}</div><div class="body">
+        <span class="type">人形 · 门店与舞台</span><h4>银河通用 ET1</h4><span class="price">¥79,000 / 139,000 / 179,000</span>
+        <p class="hook">1.25 米高，看你做一遍动作就能学会。上线 24 小时，预订过 200 台。</p>
+        <table><tbody>
+          <tr><td>可购</td><td>预订中，尚未批量交付</td></tr>
+          <tr><td>场景</td><td>门店迎宾、乐园、舞台</td></tr>
+          <tr><td>关键能力</td><td>32 kg；本体 26 自由度，可选灵巧手另加 12</td></tr>
+          <tr><td>算力</td><td>RK3588 + RDK X5；Pro 加 40 TOPS，旗舰加 100 TOPS</td></tr>
+          <tr><td>安全</td><td class="na">未披露</td></tr>
+        </tbody></table>
+        <p class="note"><span class="ev n">媒体</span> <a href="https://www.humanoidsdaily.com/news/galbot-et1-price-three-versions">规格</a> · <a href="https://news.qq.com/rain/a/20261004A06SJW00">预订</a></p></div></div>
+      <div class="pc"><div class="sil">{{svg:robot-humanoid-research}}</div><div class="body">
+        <span class="type">人形 · 研发平台</span><h4>Astribot T1</h4><span class="price">$18,000 起</span>
+        <p class="hook">绳驱双臂，SDK 开到控制和传感器层。给实验室和开发者的人形，北美现货。</p>
+        <table><tbody>
+          <tr><td>可购</td><td>北美现货，IROS 期间开放订购</td></tr>
+          <tr><td>场景</td><td>研发；演示过收拾背包，家务还要再训练</td></tr>
+          <tr><td>关键能力</td><td>约 1.55 m、66 kg；23 自由度；单臂负载 5 kg</td></tr>
+          <tr><td>软件</td><td>Astribot OS + Lumo-2 模型</td></tr>
+          <tr><td>安全</td><td class="na">未披露</td></tr>
+        </tbody></table>
+        <p class="note"><span class="ev n">媒体</span> <a href="https://www.humanoidsdaily.com/news/astribot-t1-north-america-iros-18000">来源</a> · <a href="https://roboticsandautomationnews.com/2026/10/02/astribot-brings-its-t1-humanoid-robot-to-north-america/105448/">Astribot OS</a></p></div></div>
+      <div class="pc"><div class="sil">{{svg:robot-humanoid-industrial}}</div><div class="body">
+        <span class="type">人形 · 仓储工业</span><h4>Agility Digit 5</h4><span class="price">$8,500/月 · 部署费约 $25k</span>
+        <p class="hook">按月出租的搬运工。能搬约 23 公斤，一块电池最长约 22 小时，2027 年底全面供货。</p>
+        <table><tbody>
+          <tr><td>可购</td><td>2027 上半年抢先体验</td></tr>
+          <tr><td>场景</td><td>上一代在 9 个客户站点累计跑了 6.5 万小时，含丰田加拿大工厂</td></tr>
+          <tr><td>关键能力</td><td>负载约 50 磅；垂直够高约 7.2 英尺</td></tr>
+          <tr><td>安全</td><td>协作安全架构 + FORT 外部安全接口；客户现场仍加护栏</td></tr>
+        </tbody></table>
+        <p class="note"><span class="ev o">监管文件</span> <a href="https://www.sec.gov/Archives/edgar/data/0002074973/000121390026107259/ea030784201ex99-1.htm">8-K 附件</a> · <a href="#case">看深度拆解</a></p></div></div>
+      <div class="pc"><div class="sil">{{svg:robot-wheeled-dualarm}}</div><div class="body">
+        <span class="type">半人形 · 商用洗衣</span><h4>Dyna Taku</h4><span class="price">未公布</span>
+        <p class="hook">轮子代替双腿，换来更稳的底盘。一镜到底洗、烘、叠、上架，跑满 1 小时。</p>
+        <table><tbody>
+          <tr><td>可购</td><td>还没进客户现场</td></tr>
+          <tr><td>关键能力</td><td>4 个转向轮；两条 7 自由度手臂</td></tr>
+          <tr><td>软件</td><td>Dyna-2.1：强化学习全身控制 + 操作策略 + 视觉语言模型调度流程</td></tr>
+        </tbody></table>
+        <p class="note"><span class="ev s">公司自述</span> <a href="https://www.humanoidsdaily.com/news/dyna-taku-dyna-2-1-autonomous-laundry">来源</a></p></div></div>
+      <div class="pc"><div class="sil">{{svg:robot-hand}}</div><div class="body">
+        <span class="type">核心部件 · 灵巧手</span><h4>Atlas 新手</h4><span class="price">不单独销售</span>
+        <p class="hook">去掉小指，换来更好修、更好用工具的四根手指。13 个自由度，指腹和掌心铺满触觉。</p>
+        <table><tbody>
+          <tr><td>设计取舍</td><td>工程师用“限制条件”实验，逐项验证少一根手指丢掉了什么</td></tr>
+          <tr><td>用途</td><td>工具操作、工厂维护</td></tr>
+        </tbody></table>
+        <p class="note"><span class="ev o">官方</span> <a href="https://bostondynamics.com/blog/robot-hands-for-modern-ai-and-real-work/">来源</a></p></div></div>
+      <div class="pc"><div class="sil">{{svg:robot-open-source}}</div><div class="body">
+        <span class="type">人形 · 开源</span><h4>RoboParty RP1</h4><span class="price">未公布</span>
+        <p class="hook">IROS 上亮相的开源人形，第四季度会放出更多设计。教学和科研值得等一等。</p>
+        <table><tbody>
+          <tr><td>可购</td><td>开源范围第四季度扩大</td></tr>
+          <tr><td>关键能力</td><td class="na">待开源后补齐</td></tr>
+        </tbody></table>
+        <p class="note"><span class="ev n">媒体</span> <a href="https://www.humanoidsdaily.com/news/roboparty-rp1-humanoid-iros-open-source">来源</a></p></div></div>
+    </div>
+    <p class="aside">还在路上的：松下定下 2029 年量产人形，主打电池安全；川崎计划 2030 年前后推出 Kaleido；特斯拉得州 Optimus 工厂的钢结构据估算完成了四成。</p>
+  </div>
+</section>
+
+<!-- ONE CHART -->
+<section class="band b-soft" id="ladder">
+  <div class="frame">
+    <div class="sh"><span class="no">本期一张图</span><h2>你看到的“台数”，停在哪一级？</h2><p>同样叫“台”，可能是能造多少、卖了多少，也可能是真在干活的。越往上越接近真实，愿意公开的厂商也越少。</p></div>
+    <div class="ladder" role="list">
+      <div class="rung" role="listitem"><div class="lab">有效工作<small>自己干完了多少</small></div><div class="row"><span class="nb"><b>60% 自主</b><span>Nucleus 2 小时工厂演示，其余靠遥控</span></span><span class="nb"><b>1 小时</b><span>Dyna 一镜到底洗衣，单次</span></span><span class="nb gapcell"><b>空白</b><span>规模部署的接管率，没人公开</span></span></div></div>
+      <div class="rung" role="listitem"><div class="lab">在岗时长<small>每天干多久</small></div><div class="row"><span class="nb"><b>16 h/天</b><span>Maven，一周 5 天</span></span><span class="nb"><b>6.5 万 h</b><span>上一代 Digit 累计</span></span><span class="nb gapcell"><b>空白</b><span>乐园和门店机器人的日工时</span></span></div></div>
+      <div class="rung" role="listitem"><div class="lab">部署<small>到了现场</small></div><div class="row"><span class="nb"><b>300+ / 100</b><span>智元：长隆 / 爱仕达 100 家店</span></span><span class="nb"><b>30+ 个服务点</b><span>跨维智能国庆景区，台数未说</span></span><span class="nb"><b>9 个站点</b><span>Agility 客户站点</span></span></div></div>
+      <div class="rung" role="listitem"><div class="lab">出货<small>卖出去</small></div><div class="row"><span class="nb"><b>≈2.5 万台</b><span>IDC，上半年全球，中国厂商约 78%</span></span><span class="nb"><b>≈1.91 万台</b><span>另一组统计，中国占比超 97%</span></span></div></div>
+      <div class="rung" role="listitem"><div class="lab">订单 / 预订<small>有人要</small></div><div class="row"><span class="nb"><b>1,000 台</b><span>Digit，3 年租期，按里程碑兑现</span></span><span class="nb"><b>200+ 台</b><span>银河通用 ET1，首日预订</span></span><span class="nb"><b>数千万元</b><span>影身智能制鞋产线海外订单</span></span></div></div>
+      <div class="rung" role="listitem"><div class="lab">产能<small>能造多少</small></div><div class="row"><span class="nb"><b>1,500 台/月</b><span>优必选柳州工厂的上限</span></span><span class="nb"><b>1 万台/年</b><span>Agility RoboFab 设计产能</span></span></div></div>
+    </div>
+    <p class="aside" style="margin-top:16px">下次看到一个“台数”，先问它在哪一级。本刊每期都会记下，各家的数字往上爬了几级。</p>
+  </div>
+</section>
+
+<!-- 03 SCENES -->
+<section class="band b-dark" id="scenes">
+  <div class="frame">
+    <div class="sh"><span class="no">03 · 场景</span><h2>十个场景，谁走到了小批量</h2><p>文旅和零售跑得最快，台数已经上百；工厂和仓库更看重节拍和安全，还停在试点。底部两行是相邻自动化，当作参照。</p></div>
+    <div class="mlegend"><span><span class="tv show">展示</span> 迎宾、讲解、表演</span><span><span class="tv assist">辅助</span> 导购、服务、巡检</span><span><span class="tv prod">生产</span> 搬运、装配、码垛</span><span>珊瑚色竖线 = 本期新事件 · 虚线框 = 规划</span></div>
+    <div class="scroll">
+      <div class="matrix" role="table" aria-label="场景成熟度地图">
+        <div class="h">场景</div><div class="h st">演示 / 测试<span class="stage">STAGE 1</span></div><div class="h st">试点<span class="stage">STAGE 2</span></div><div class="h st">小批量<span class="stage">STAGE 3</span></div><div class="h st">规模化<span class="stage">STAGE 4</span></div>
+
+        <div class="s"><span class="si">{{svg:scene-park}}</span>文旅景区</div>
+        <div></div><div></div>
+        <div><span class="chip new"><b>智元 × 长隆</b><span class="tv show">展示</span> 300 台以上<small>09.28</small></span><span class="chip new"><b>国庆景区服务站</b><span class="tv assist">辅助</span> 跨维 30+ 点；智平方 10+ 省；银河通用进颐和园、八达岭<small>09.30</small></span></div>
+        <div></div>
+
+        <div class="s"><span class="si">{{svg:scene-retail}}</span>零售门店</div>
+        <div></div><div></div>
+        <div><span class="chip new"><b>智元 × 爱仕达</b><span class="tv assist">辅助</span> 100 台 X2 进 100 家店<small>09.29</small></span></div>
+        <div></div>
+
+        <div class="s"><span class="si">{{svg:scene-factory}}</span>工厂制造</div>
+        <div><span class="chip new"><b>Nucleus</b><span class="tv prod">生产</span> 2 小时演示，约 60% 自主<small>10.01</small></span></div>
+        <div><span class="chip new"><b>Atlas</b><span class="tv prod">生产</span> 在汽车工厂训练中心练活<small>09.21 起</small></span><span class="chip new"><b>影身智能</b><span class="tv prod">生产</span> 制鞋产线，海外订单（媒体）<small>10.03</small></span><span class="chip new plan"><b>日立 × Agile Robots</b><span class="tv prod">生产</span> 上下料、装配<small>10.01 · 规划</small></span></div>
+        <div></div><div></div>
+
+        <div class="s"><span class="si">{{svg:scene-warehouse}}</span>仓储物流</div>
+        <div></div>
+        <div><span class="chip"><b>Digit 上一代</b><span class="tv prod">生产</span> 9 个站点，每个流程 3–8 台<small>背景</small></span><span class="chip new"><b>Maven</b><span class="tv prod">生产</span> 码垛、周转箱，长期合同<small>10.01</small></span></div>
+        <div><span class="chip new plan"><b>Digit 5</b> 1,000 台订单，2027 年底全面供货<small>规划</small></span></div>
+        <div></div>
+
+        <div class="s"><span class="si">{{svg:scene-inspection}}</span>四足巡检</div>
+        <div></div><div></div><div></div>
+        <div><span class="chip new"><b>ANYbotics Shift</b><span class="tv assist">辅助</span> 车队运营平台上线；四足巡检是眼下最成熟的品类<small>10.01</small></span></div>
+
+        <div class="s">医院物流</div>
+        <div></div>
+        <div><span class="chip new"><b>NEURA HealthTech</b><span class="tv assist">辅助</span> 转运病床和无菌物资，按月租<small>09.30</small></span></div>
+        <div></div><div></div>
+
+        <div class="s"><span class="si">{{svg:scene-laundry}}</span>商用洗衣</div>
+        <div><span class="chip new"><b>Dyna Taku</b><span class="tv prod">生产</span> 1 小时一镜到底<small>09.29</small></span></div>
+        <div></div><div></div><div></div>
+
+        <div class="s">家庭家务</div>
+        <div><span class="chip"><b>Figure Helix 2.5</b><span class="tv prod">生产</span> 30 个陌生家庭，完成率 56%<small>09.17 背景</small></span></div>
+        <div></div><div></div><div></div>
+
+        <div class="s"><span class="si">{{svg:scene-outdoor}}</span>公共安全</div>
+        <div><span class="chip new"><b>云深处 DR02</b><span class="tv assist">辅助</span> 杭州西湖边雨中执勤测试<small>10.06</small></span></div>
+        <div></div><div></div><div></div>
+
+        <div class="s">科研教育</div>
+        <div></div><div></div>
+        <div><span class="chip new"><b>研发型人形</b><span class="tv show">展示</span> T1 现货、ET1 预订 200+<small>10.02–10.04</small></span></div>
+        <div></div>
+
+        <div class="s adj"><span class="si">{{svg:scene-construction}}</span>基建工地 · 参照</div>
+        <div></div><div></div><div></div>
+        <div><span class="chip"><b>ASI Mobius</b><span class="tv prod">生产</span> 多品牌工程机械编队<small>09.30</small></span></div>
+
+        <div class="s adj">电子制造 · 参照</div>
+        <div></div><div></div><div></div>
+        <div><span class="chip"><b>Bright Machines</b><span class="tv prod">生产</span> 130 多座微工厂<small>10.05</small></span></div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:var(--band-mute);margin-top:12px">阶段由编辑依据公开信息判断。下期起用箭头标出各场景的升降。</p>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section class="band b-white" id="evidence">
+  <div class="frame">
+    <div class="sh"><span class="no">03 · 场景（续）</span><h2>六个格子，看每个部署露了多少底</h2><p>同一张卡，同样六格。斜纹格子是厂商没说的部分，斜纹越多，越该多问一句。</p></div>
+    <div class="ecards">
+      <div class="ec"><div class="meta"><span>文旅景区</span><span class="d">09.28</span><span class="ev o">官方</span></div><h4>智元 × 长隆乐园</h4>
+        <div class="cells"><div class="cell"><i>台数</i><b>300+</b></div><div class="cell x"><i>日工时</i><b>没说</b></div><div class="cell x"><i>自主率</i><b>没说</b></div><div class="cell"><i>任务</i><b>迎宾 · 导览</b></div><div class="cell"><i>价值</i><b>展示</b></div><div class="cell x"><i>谁付钱</i><b>没说</b></div></div>
+        <div class="score"><span>露底 3/6</span><span class="bar"><i style="width:50%"></i></span></div>
+        <div class="src"><a href="https://www.agibot.com.cn/article/315/detail/231.html">智元公告</a></div></div>
+      <div class="ec"><div class="meta"><span>零售门店</span><span class="d">09.29</span><span class="ev o">官方</span></div><h4>智元 × 爱仕达门店</h4>
+        <div class="cells"><div class="cell"><i>台数</i><b>100 台 / 100 店</b></div><div class="cell x"><i>日工时</i><b>没说</b></div><div class="cell x"><i>自主率</i><b>没说</b></div><div class="cell"><i>任务</i><b>导购</b></div><div class="cell"><i>价值</i><b>辅助</b></div><div class="cell x"><i>谁付钱</i><b>没说</b></div></div>
+        <div class="score"><span>露底 3/6</span><span class="bar"><i style="width:50%"></i></span></div>
+        <div class="src"><a href="https://www.agibot.com.cn/article/315/detail/234.html">智元公告</a></div></div>
+      <div class="ec"><div class="meta"><span>文旅景区</span><span class="d">09.30</span><span class="ev n">媒体</span></div><h4>国庆景区服务站（多家）</h4>
+        <div class="cells"><div class="cell"><i>台数</i><b>30+ 点位</b></div><div class="cell x"><i>日工时</i><b>没说</b></div><div class="cell x"><i>自主率</i><b>没说</b></div><div class="cell"><i>任务</i><b>咖啡 · 冰淇淋 · 零售</b></div><div class="cell"><i>价值</i><b>辅助</b></div><div class="cell"><i>谁付钱</i><b>与运营方合作</b></div></div>
+        <div class="score"><span>露底 4/6</span><span class="bar"><i style="width:67%"></i></span></div>
+        <div class="src"><a href="https://www.21jingji.com/article/20260930/herald/e465921772a7b869988a95580c7db1e6.html">21世纪经济报道</a></div></div>
+      <div class="ec"><div class="meta"><span>仓储 · 工厂</span><span class="d">10.01</span><span class="ev n">媒体</span></div><h4>Maven 移动操作</h4>
+        <div class="cells"><div class="cell x"><i>台数</i><b>没说</b></div><div class="cell"><i>日工时</i><b>16 h · 5 天/周</b></div><div class="cell x"><i>自主率</i><b>没说</b></div><div class="cell"><i>任务</i><b>码垛 · 周转箱</b></div><div class="cell"><i>价值</i><b>生产</b></div><div class="cell"><i>谁付钱</i><b>长期合同</b></div></div>
+        <div class="score"><span>露底 4/6</span><span class="bar"><i style="width:67%"></i></span></div>
+        <div class="src"><a href="https://www.therobotreport.com/how-maven-robotics-plans-automate-industrial-work-one-task-at-a-time/">The Robot Report</a></div></div>
+      <div class="ec"><div class="meta"><span>工厂</span><span class="d">10.01</span><span class="ev s">公司自述</span></div><h4>Nucleus 工厂演示</h4>
+        <div class="cells"><div class="cell x"><i>台数</i><b>没说</b></div><div class="cell"><i>日工时</i><b>2 h 演示</b></div><div class="cell"><i>自主率</i><b>约 60%</b></div><div class="cell x"><i>任务</i><b>没细说</b></div><div class="cell"><i>价值</i><b>生产</b></div><div class="cell x"><i>谁付钱</i><b>暂无客户</b></div></div>
+        <div class="score"><span>露底 3/6</span><span class="bar"><i style="width:50%"></i></span></div>
+        <div class="src"><a href="https://robottoday.com/article/robottoday-weekly-september-28-october-2-2026">RobotToday</a></div></div>
+      <div class="ec"><div class="meta"><span>商用洗衣</span><span class="d">09.29</span><span class="ev s">公司自述</span></div><h4>Dyna Taku 洗衣</h4>
+        <div class="cells"><div class="cell x"><i>台数</i><b>暂无客户</b></div><div class="cell"><i>日工时</i><b>1 h 单次</b></div><div class="cell"><i>自主率</i><b>称全程自主</b></div><div class="cell"><i>任务</i><b>洗 · 烘 · 叠 · 上架</b></div><div class="cell"><i>价值</i><b>生产</b></div><div class="cell x"><i>谁付钱</i><b>没说</b></div></div>
+        <div class="score"><span>露底 4/6</span><span class="bar"><i style="width:67%"></i></span></div>
+        <div class="src"><a href="https://www.humanoidsdaily.com/news/dyna-taku-dyna-2-1-autonomous-laundry">Humanoids Daily</a></div></div>
+    </div>
+
+    <p class="sub-h" style="margin-top:56px">说过的话，记在账上</p>
+    <p class="aside" style="margin:-6px 0 14px">厂商公开过的时间表，到期回来对账。</p>
+    <div class="promise">
+      <div class="pr"><div class="who">Agility Digit 5</div><div class="what">全面供货从 2026 年底推到 2027 年底<small>此前 S-4 文件 → 本次投资者日</small></div><span class="stamp late">已延期</span></div>
+      <div class="pr"><div class="who">小鹏 IRON</div><div class="what">广州自动化产线 9 月 19 日启用，目标年底规模量产，2027 年交付</div><span class="stamp track">跟踪中</span></div>
+      <div class="pr"><div class="who">优必选</div><div class="what">柳州工厂每月最多 1,500 台，待看实际产量和交付</div><span class="stamp claim">产能声明</span></div>
+      <div class="pr"><div class="who">Tesla Optimus</div><div class="what">得州工厂钢结构约完成四成（媒体估算）</div><span class="stamp track">跟踪中</span></div>
+      <div class="pr"><div class="who">松下 · 川崎</div><div class="what">松下 2029 年量产；川崎约 2030 年推出 Kaleido</div><span class="stamp track">跟踪中</span></div>
+    </div>
+    <div class="src"><a href="https://finance.sina.com.cn/roll/2026-09-19/doc-iniskimy7476810.shtml">小鹏 IRON</a><a href="https://www.humanoidsdaily.com/news/ubtech-factory-tour-1500-robots-monthly-capacity">优必选</a><a href="https://www.digitimes.com/news/a20261005PD232/kawasaki-humanoid-robot-development-launch.html">川崎</a><a href="https://www.humanoidsdaily.com/news/panasonic-humanoid-robots-2029-battery-safety">松下</a></div>
+  </div>
+</section>
+
+<!-- 04 TECH -->
+<section class="band b-soft" id="tech">
+  <div class="frame">
+    <div class="sh"><span class="no">04 · 技术</span><h2>这两周能上手的模型和工具</h2><p>做视频生成的公司开始造机器人的“大脑”，Spot 学会了听 AI 智能体的指挥。每条点到为止，链接在名字上。</p></div>
+    <div class="scroll">
+    <table class="tbl">
+      <thead><tr><th>名称 · 日期</th><th>是什么</th><th>形态</th><th>许可</th><th>硬件</th><th>接入</th><th>成绩出自</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="https://www.therobotreport.com/runway-introduces-praxis-1-world-action-model-robotics/">Runway Praxis-1</a></b><br><small>10.01</small></td><td>看网络视频长大的世界动作模型</td><td class="st-no">未开放</td><td>权重几个月内放出</td><td>未公布</td><td>Standard Bots 等早期合作方</td><td><span class="ev s">自测：模型内评估与真机相关 0.95</span></td></tr>
+        <tr><td><b><a href="https://roboticsandautomationnews.com/2026/10/01/boston-dynamics-updates-spot-to-connect-autonomous-robot-inspections-with-enterprise-ai-systems/105384/">Spot 5.2</a></b><br><small>10.01</small></td><td>Orbit 加了 MCP 层，AI 智能体能按条件派 Spot 出勤；巡检看图接入 Gemini</td><td class="st-yes">软件更新</td><td>商业</td><td>Spot</td><td>MCP</td><td><span class="ev n">媒体</span></td></tr>
+        <tr><td><b><a href="https://www.therobotreport.com/pegasus-1-6-brings-video-understanding-physical-ai-says-twelvelabs/">Pegasus 1.6</a></b><br><small>10.06</small></td><td>读懂第一人称视频，帮你整理训练数据</td><td class="st-part">闭源 API</td><td>商业</td><td>云端</td><td>TwelveLabs</td><td><span class="ev n">媒体</span></td></tr>
+        <tr><td><b><a href="https://www.humanoidsdaily.com/news/superclue-september-2026-robot-brain-planning-gap">SuperCLUE 具身评测</a></b><br><small>10.05</small></td><td>给 10 个具身“大脑”打分，含 Gemini-Robotics-ER-2</td><td class="st-yes">报告</td><td>报告公开</td><td>—</td><td>—</td><td><span class="ev e">测认知，不测任务完成</span></td></tr>
+        <tr><td><b><a href="https://www.anybotics.com/news/shift-launch/">ANYbotics Shift</a></b><br><small>10.01</small></td><td>四足巡检车队的运营后台，带预测性维护</td><td class="st-yes">SaaS</td><td>商业</td><td>ANYmal</td><td>计划接第三方</td><td><span class="ev o">官方</span></td></tr>
+        <tr><td><b><a href="https://www.stdaily.com/web/gdxw/2026-09/24/content_587456.html">RLark</a></b><br><small>09.24</small></td><td>无问芯穹和清华的具身云平台，几分钟纳管一台机器人</td><td class="st-part">称开源</td><td>未见仓库</td><td>云原生集群</td><td>—</td><td><span class="ev s">自述</span></td></tr>
+        <tr><td><b><a href="https://openrouter.ai/perceptron/perceptron-mk1.5-20260925">Perceptron Mk1.5</a></b><br><small>09.25</small></td><td>输出带时间戳的点、框和物体轨迹</td><td class="st-part">闭源 API</td><td>按 token</td><td>云端</td><td>OpenRouter</td><td><span class="ev s">自述</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <details class="more"><summary>上周发布、本期仍值得一看：FLUX 3 Action、Physical AI Toolchain、Isaac ROS 5.0、Intrinsic Core、Skild 自博弈、NVIDIA Halos</summary>
+      <div class="scroll" style="margin-top:12px">
+      <table class="tbl">
+        <thead><tr><th>名称</th><th>是什么</th><th>形态</th><th>许可</th><th>硬件</th><th>接入</th><th>成绩出自</th></tr></thead>
+        <tbody>
+          <tr><td><b><a href="https://huggingface.co/blog/black-forest-labs/flux-3-action">FLUX 3 Action</a></b></td><td>7B 世界动作模型，同时预测下一幕画面和动作</td><td class="st-yes">权重</td><td>FLUX Kommunity，商用需确认</td><td>B200 上约 41 ms 一个动作块</td><td>LeRobot、SO-101</td><td><span class="ev s">自测</span></td></tr>
+          <tr><td><b><a href="https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/">Physical AI Toolchain</a></b></td><td>把推理拆到端、边、云，按档位部署</td><td class="st-yes">开源</td><td>许可证待核</td><td>最低一台笔记本</td><td>ROS 2、LeRobot</td><td><span class="ev o">官方</span></td></tr>
+          <tr><td><b><a href="https://blogs.nvidia.com/blog/isaac-ros-5-0/">Isaac ROS 5.0</a></b></td><td>开发助手接进工作流，FoundationPose 提速</td><td class="st-yes">开源</td><td>开源</td><td>Jetson Orin Nano 到 Thor</td><td>ROS 2 Lyrical</td><td><span class="ev s">提速 5.5 倍为官方数据</span></td></tr>
+          <tr><td><b><a href="https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core">Intrinsic Core</a></b></td><td>本地运行时 + 实时控制 + 数字孪生，附 CNC 上下料方案</td><td class="st-yes">开源</td><td>Apache 2.0</td><td>未公布</td><td>ROS</td><td><span class="ev o">官方</span></td></tr>
+          <tr><td><b><a href="https://www.skild.ai/blogs/physical-self-play">Skild 自博弈</a></b></td><td>仿真里踢了“140 年”足球，再搬到人形真机</td><td class="st-no">未开放</td><td>—</td><td>—</td><td>Isaac Sim</td><td><span class="ev s">自述</span></td></tr>
+          <tr><td><b><a href="https://blogs.nvidia.com/blog/physical-ai-halos-safety/">NVIDIA Halos</a></b></td><td>机器人功能安全平台</td><td class="st-part">平台</td><td>商业</td><td>NVIDIA</td><td>Isaac</td><td><span class="ev o">官方</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </details>
+
+    <div style="margin-top:52px;display:grid;gap:24px">
+      <figure class="fig" style="margin:0"><h4>三条动作模型路线</h4><div class="sub">差别在喂进去什么、吐出来什么</div><div class="art">{{svg:diagram-action-models}}</div><div class="cap">C 列的 π0 / π0.5 已经开源；Gemini Robotics、Helix 这类商用模型不开放。数据从视频来，还是像 Skild 那样从仿真里自己踢出来，是这几条路线真正的分歧。</div></figure>
+      <figure class="fig" style="margin:0"><h4>推理放在哪一层</h4><div class="sub">Microsoft 的工具链和 FCC 的新限制，把这个老问题又摆上了桌面</div><div class="art">{{svg:diagram-edge-cloud}}</div><div class="cap">频率为示意。关节伺服和安全回路一般在驱动器里，Jetson 管感知，小模型策略也可以放在机器人身上跑。</div></figure>
+    </div>
+
+    <div class="two" style="margin-top:48px">
+      <div>
+        <p class="sub-h">这两周能动手试的三件事</p>
+        <ol class="try" style="padding:0;margin:0;display:grid;gap:12px">
+          <li><b>同样 200 条示范，谁学得更好？</b>在 SO-101 上拿 FLUX 3 Action 和 SmolVLA 或 π0 正面比一比，另留 50 条做考卷，记下完成率和接管次数。<small>一套 SO-101 + 一张训练卡（7B 可试 LoRA）</small></li>
+          <li><b>推理放端上还是放边上？</b>用 Physical AI Toolchain 测动作块延迟的 p50 和 p99，再人为加点网络抖动，看成功率掉多少。<small>Jetson Orin + 局域网里一台 GPU 主机，用公开检查点即可</small></li>
+          <li><b>给自家相机调一调感知</b>：用 Isaac ROS 5.0 微调 FoundationStereo，在 Orin Nano 上复测 FoundationPose 的速度。<small>Jetson + 双目相机，几百帧自采图像</small></li>
+        </ol>
+      </div>
+      <div>
+        <p class="sub-h">标准与安全</p>
+        <div class="items">
+          <div class="item"><div class="meta"><span class="d">09.28</span><span class="ev o">官方</span></div><h4>人形机器人“作业操作”国标出炉</h4><p>GB/T 48317.5-2026，明年 4 月 1 日实施。<a href="https://std.samr.gov.cn/gb/search/gbDetailed?id=RCQ9y2Lfamk%3D&amp;mode=p">标准信息</a></p></div>
+          <div class="item"><div class="meta"><span class="d">10.06</span><span class="ev n">媒体</span></div><h4>客户的原话：“任何人形部署都得加护栏”</h4><p>舍弗勒的代表在 Agility 投资者日上这么说，原因是 ISO 安全标准还没出来。挡住通道或设备入口的活，暂时都干不了。</p></div>
+          <div class="item"><div class="meta"><span class="d">09.30 / 10.04</span><span class="ev n">媒体</span></div><h4>加州叫停人机格斗；FCC 限制或推着推理回到本地</h4><p>加州体育委员会给 REK 发了停止函。FCC 7 月把境外生产的先进机器人设备列入受限清单，有评论认为厂商会因此把更多推理搬到端侧。<a href="https://techspot.com/news/114095-humanoid-robots-pummel-youtuber-cage-matches-california-tells.html">加州</a> · <a href="https://www.therobotreport.com/fcc-robot-restrictions-could-accelerate-shift-to-local-ai/">FCC</a></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 EDU -->
+<section class="band b-cream" id="edu">
+  <div class="frame">
+    <div class="sh"><span class="no">05 · 教育</span><h2>九所高校开招，第一节实验课怎么上</h2><p>“具身智能”第一次进了本科专业目录。这一栏给老师们备了一张日历、一张追踪表、一张能力地图，和一份可以直接拿去上的实验课。</p></div>
+
+    <div class="cal">
+      <div class="cd"><div class="date">10 月<b>23</b>–25 日</div><div><h5>国际具身智能技能大赛 · 上海</h5><p>9 个赛道、23 个赛项，现在报名还来得及。<a href="https://www.cnfin.com/gs-lb/detail/20260930/4476548_1.html">详情</a></p></div></div>
+      <div class="cd"><div class="date">2027<b>4.1</b>实施</div><div><h5>人形机器人作业操作国标</h5><p>职教实训的评价表可以提前对着条款改。</p></div></div>
+      <div class="cd"><div class="date">每期<b>↻</b>更新</div><div><h5>竞赛、师训、标准</h5><p>日历跨期累积，提前八周提醒。</p></div></div>
+    </div>
+
+    <div class="two" style="margin-top:44px">
+      <div>
+        <p class="sub-h">专业建设追踪表</p>
+        <div class="scroll">
+        <table class="tbl" style="min-width:480px">
+          <thead><tr><th>院校</th><th>首年招生</th><th>怎么招</th></tr></thead>
+          <tbody>
+            <tr><td><b>北京理工大学</b></td><td class="mono">120</td><td>—</td></tr>
+            <tr><td><b>东北大学</b></td><td class="mono">60</td><td>—</td></tr>
+            <tr><td><b>北京邮电大学</b></td><td class="mono">大类</td><td>先进大类，大二分流，专业学生 2028 年才出现</td></tr>
+            <tr><td><b>上海交大 · 浙大 · 西安交大 · 北航 · 哈工大 · 南航</b></td><td class="mono">约 30</td><td>依托人工智能、控制、机械等强势学科</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="aside" style="margin-top:8px">教育部 4 月发布的新版本科专业目录首次列入“具身智能”。招生数据来自媒体，以学校公布为准。<a href="https://www.stdaily.com/web/gdxw/2026-04/28/content_509258.html">科技日报</a> · <a href="https://eu.36kr.com/zh/p/3864187082505094">36氪</a></p>
+      </div>
+      <div class="items">
+        <p class="sub-h" style="margin-bottom:0">这两周</p>
+        <div class="item"><div class="meta"><span>新加坡</span><span class="d">09.30</span><span class="ev o">官方</span></div><h4>新加坡建了一座公共安全人形机器人中心</h4><p>HTX 的 H2RC 由政府、企业、高校共用，动捕、遥操作、VLA 训练一应俱全。<a href="https://www.htx.gov.sg/whats-happening/all-news---events/all-news/2026/media-release-htx-opens-humanoid-robotics-centre-to-advance-embodied-ai-for-public-safety">来源</a></p></div>
+        <div class="item"><div class="meta"><span>职业能力</span><span class="d">09.20</span><span class="ev n">媒体</span></div><h4>“人形机器人应用技术员”有了第一个考点</h4><p>工信部教育与考试中心的职业能力评价落地佛山，首期 20 人，脱产培训 5 天。<a href="https://www.chinanews.com.cn/cj/2026/09-21/10700874.shtml">来源</a></p></div>
+        <div class="item"><div class="meta"><span>产教融合</span><span class="d">09.19–09.23</span><span class="ev n">媒体</span></div><h4>实训基地、产业学院、职教赛场都热起来了</h4><p>成都经开区招募具身智造实训基地共建方；厦门工学院和宇树合办产业学院；黑龙江的人形机器人职教选拔赛来了 546 名选手。<a href="https://finance.sina.com.cn/tech/roll/2026-09-23/doc-inisviwc1147399.shtml">成都</a> · <a href="http://xm.fjsen.com/2026-09/19/content_32255902.htm">厦门</a> · <a href="https://news.qq.com/rain/a/20260920A053T200">黑龙江</a></p></div>
+        <div class="item"><div class="meta"><span>采购</span><span class="d">10.02–10.04</span></div><h4>研发级人形，单台设备费就能买</h4><p>1.8 万美元的 T1、7.9 万元起的 ET1，都在实验室设备预算够得着的范围里。下单前问清三件事：SDK 开到哪一层，能不能接仿真，保修几年。</p></div>
+      </div>
+    </div>
+
+    <p class="sub-h" style="margin-top:48px">岗位能力地图</p>
+    <div class="scroll">
+    <table class="tbl" style="background:transparent">
+      <thead><tr><th>岗位</th><th>要考的能力</th><th>配套实验</th><th>平台</th><th>层次</th><th>本期信号</th></tr></thead>
+      <tbody>
+        <tr><td><b>应用技术员 / 运维</b></td><td>标定、排障、安全区设置</td><td>Nav2 部署 + 急停回路测试</td><td>ROS 2、Gazebo</td><td>中职、高职</td><td>佛山考点开考；客户现场要护栏</td></tr>
+        <tr><td><b>数据采集工程师</b></td><td>采集规范、数据质检、自主率统计</td><td>遥操作采 50 条，训 ACT，测成功率</td><td>LeRobot、SO-101</td><td>高职、本科</td><td>FLUX 3 Action 适配约要 200 条示范</td></tr>
+        <tr><td><b>机器人学习算法</b></td><td>强化学习、仿真到真机、动作模型微调</td><td>步态 RL 训练后上真机</td><td>Isaac Lab、MuJoCo</td><td>本科、研究生</td><td>Praxis-1、Dyna-2.1、Skild 自博弈</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p class="sub-h" style="margin-top:44px">实验课菜谱 · 第 1 号</p>
+    <div class="recipe">
+      <div>
+        <h5>同样 200 条示范，两种策略谁更强？</h5>
+        <div class="k"><span>4 学时</span><span>本科高年级 / 研究生</span><span>练的是：数据采集 + 算法评测</span></div>
+        <ol>
+          <li>用 SO-101 遥操作采 200 条“抓取—放置”，另采 50 条当考卷。</li>
+          <li>分别微调 SmolVLA 和 FLUX 3 Action。</li>
+          <li>同一张考卷上，记完成率、接管次数和推理延迟。</li>
+          <li>挑三个失败案例，写清是看错了、抓偏了还是放歪了。</li>
+        </ol>
+      </div>
+      <div>
+        <h5>准备与打分</h5>
+        <ul>
+          <li>硬件：SO-101 一套，训练卡一张。</li>
+          <li>软件：LeRobot；用 FLUX 前先读许可证。</li>
+          <li>打分：数据质量 30%，实验设计 30%，结果分析 40%。</li>
+          <li>加分题：示范数改成 50 / 100 / 200，画出学习曲线。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 RESEARCH + STORYLINES -->
+<section class="band b-white" id="research">
+  <div class="frame">
+    <div class="two">
+      <div>
+        <div class="sh" style="margin-bottom:20px"><span class="no">06 · 研究</span><h2>四篇论文，挑和现场有关的说</h2></div>
+        <div class="paper"><h5><a href="https://arxiv.org/abs/2609.39685">RoboCoach</a></h5><p class="hook">13.3% → 75.0%</p><p>先找出机器人最弱的那一步，再专门补示范。Franka 上每个子任务补 150 条，完整任务成功率从 13.3% 跳到 75.0%；同样预算平均撒，只有 30.0%。遥操作的钱，该这么花。</p><p class="rp">真机 · 作者报告</p></div>
+        <div class="paper"><h5><a href="https://arxiv.org/abs/2609.38059">WorldLine</a></h5><p class="hook">+21.4 个百分点</p><p>动手之前先“想象”一遍：用预测视频筛掉明显会失败的动作，任务成功率最多提高 21.4 个百分点。</p><p class="rp">仿真为主 · 作者报告</p></div>
+        <div class="paper"><h5><a href="https://arxiv.org/abs/2609.38886">HIDE / SEEK</a></h5><p class="hook">15 个“光看眼前不够”的任务</p><p>机器人得记住刚才做了几次、东西藏在哪、进行到哪一步。洗衣、收拾房间这种多步骤的活，就卡在这里。</p><p class="rp">RLBench + 4 个真机任务</p></div>
+        <div class="paper"><h5><a href="https://arxiv.org/abs/2609.36605">RoboChrono</a></h5><p class="hook">连续任务的真机考卷</p><p>工厂和门店的活是一件接一件来的。这套基准考的是连续理解，比单次成功率更像现场。</p><p class="rp">真机基准 · 09.29</p></div>
+      </div>
+      <div>
+        <div class="sh" style="margin-bottom:20px"><span class="no">07 · 接着看</span><h2>四条故事线</h2></div>
+        <div class="tl">
+          <div class="e new"><h5>两本账<small>本期新开</small></h5><p>一边公开台数，一边公开单台账。下期看谁先公开日工时或接管率，在口径阶梯上再往上爬一级。</p></div>
+          <div class="e"><h5>上游巨头下场<small>持续</small></h5><p>AMD、高通、Cognex、软银，两周四笔收购。下期看交割，以及 MoveIt 和 RealSense 的发版节奏有没有变。</p></div>
+          <div class="e"><h5>数据从哪来<small>持续</small></h5><p>Praxis-1 和 FLUX 3 Action 吃视频，Skild 在仿真里自己踢，落地时还得靠约 200 条遥操作示范。下期看 Praxis-1 何时放权重。</p></div>
+          <div class="e"><h5>人形进工厂<small>持续</small></h5><p>Atlas 在练活，Digit 5 推迟，Nucleus 晒出自主比例，日立请来 Agile ONE。下期看现场节拍和干预次数。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CASE -->
+<section class="band b-dark" id="case">
+  <div class="frame">
+    <div class="sh"><span class="no">08 · 深度</span><h2>Digit 的两本账</h2><p>10 月 5 日到 6 日，Agility 在投资者日和监管文件里，把一台人形机器人的生意从头算到尾。这是迄今最完整的一份公开账本。客户一本，厂商一本，我们分开看，最后给你一个能自己拖动的计算器。</p></div>
+
+    <div class="case-grid">
+      <div class="fig book" style="margin:0"><h5>客户的账</h5>
+        <dl>
+          <dt>月租 $8,500，一年</dt><dd>≈ $100k</dd>
+          <dt>它要顶替的人工，一年</dt><dd>≈ $200k</dd>
+          <dt>租 5 年总共花</dt><dd>≈ $500k</dd>
+          <dt>买断 5 年总共花</dt><dd>≈ $400k</dd>
+          <dt class="tot">公司算的回报（租 / 买）</dt><dd class="tot">2.0x / 2.5x</dd>
+        </dl>
+        <p class="cap" style="margin-top:12px">出自 8-K 附件。“20 万美元人工”是示意值，没说对应几个班次。</p>
+      </div>
+      <div class="fig book" style="margin:0"><h5>厂商的账</h5>
+        <dl>
+          <dt>Digit 5 上市初期物料</dt><dd>≈ $150k</dd>
+          <dt>部署</dt><dd>≈ $15k</dd>
+          <dt>5 年维护与软件</dt><dd>≈ $75k</dd>
+          <dt class="tot">一台 5 年总成本</dt><dd class="tot">≈ $240k</dd>
+          <dt>出租模式回本</dt><dd>≈ 1.5 年</dd>
+          <dt>年产 1 万台时的物料目标</dt><dd>≈ $30k</dd>
+        </dl>
+        <p class="cap" style="margin-top:12px">出自投资者日的媒体整理。毛利在不同材料里口径不一，这里不引用。</p>
+      </div>
+    </div>
+
+    <figure class="fig" style="margin-top:24px">
+      <h4>1,000 台订单，一项技能一项技能地兑现</h4>
+      <div class="sub">3 亿美元以上，3 年租期；下单客户未公开，丰田加拿大工厂是已知的部署站点之一</div>
+      <div class="scroll"><svg id="flow" viewBox="0 0 1100 200" style="display:block;width:100%;min-width:820px;height:auto" role="img" aria-label="按技能分批释放订单的流程"></svg></div>
+    </figure>
+
+    <figure class="fig" style="margin-top:24px">
+      <h4>交付日期往后挪了一年</h4>
+      <div class="scroll"><svg id="slip" viewBox="0 0 1100 150" style="display:block;width:100%;min-width:820px;height:auto" role="img" aria-label="Digit 5 全面供货时间的变化"></svg></div>
+    </figure>
+
+    <div class="fig" style="margin-top:24px">
+      <h4>换成你的工厂，账还算得过来吗？</h4>
+      <div class="sub">默认值来自 Agility 公开的数字。拖动滑块，换成自己的场景。</div>
+      <div class="calc">
+        <div class="ctl">
+          <label for="c-fee"><span class="lv"><span>月租（美元）</span><output id="o-fee"></output></span><input id="c-fee" type="range" min="3000" max="15000" step="250" value="8500"></label>
+          <label for="c-dep"><span class="lv"><span>部署费 + 现场改造（含护栏）</span><output id="o-dep"></output></span><input id="c-dep" type="range" min="0" max="100000" step="5000" value="25000"></label>
+          <label for="c-lab"><span class="lv"><span>它要顶替的人工，一年</span><output id="o-lab"></output></span><input id="c-lab" type="range" min="10000" max="300000" step="1000" value="200000"></label>
+          <label for="c-eff"><span class="lv"><span>干活效率：节拍比 × 可用率</span><output id="o-eff"></output></span><input id="c-eff" type="range" min="20" max="100" step="5" value="70"></label>
+          <button type="button" class="btn" id="c-cn">换成国内一个班次：人工 12 万元/年 ≈ $17k</button>
+        </div>
+        <div>
+          <div class="out">
+            <div><i>每年净省</i><b id="r-save"></b></div>
+            <div><i>回本</i><b id="r-pay"></b></div>
+            <div><i>3 年回报</i><b id="r-roi"></b></div>
+          </div>
+          <div class="scroll" style="margin-top:14px"><svg id="calcbar" viewBox="0 0 520 150" style="display:block;width:100%;min-width:420px;height:auto" role="img" aria-label="3 年成本与节省对比"></svg></div>
+          <p class="cap">把“干活效率”从 100% 拖到 70%，账就变了样。这一格，目前没有哪家厂商公开过实测。</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="sub-h" style="margin-top:44px">验收表：按技能分批验收时，合同里写这六行</p>
+    <div class="scroll">
+    <table class="tbl">
+      <thead><tr><th>指标</th><th>怎么定义</th><th>阈值可以这样写</th></tr></thead>
+      <tbody>
+        <tr><td><b>任务</b></td><td>起止条件、物料范围、异常怎么算</td><td>从 A 区周转箱到 B 区货架，含 3 种箱型</td></tr>
+        <tr><td><b>节拍</b></td><td>单次用时 ÷ 人工用时</td><td>不超过人工的 1.3 倍</td></tr>
+        <tr><td><b>成功率</b></td><td>没人插手就完成的比例</td><td>连续两周 98% 以上</td></tr>
+        <tr><td><b>接管率</b></td><td>每千次任务被人接管几次</td><td>不超过 5 次</td></tr>
+        <tr><td><b>可用率</b></td><td>排班时间里能干活的比例</td><td>95% 以上</td></tr>
+        <tr><td><b>不达标</b></td><td>顺延、降价还是退出</td><td>两次不达标，可以退出这一批</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p class="sub-h" style="margin-top:44px">签字之前，想清楚这五件事</p>
+    <div class="risk">
+      <div><b>交付会不会再推</b>已经从 2026 年底推到 2027 年底</div>
+      <div><b>护栏吃掉多少活</b>挡通道、挡设备的任务做不了</div>
+      <div><b>大单有多大代表性</b>订单集中，且按里程碑放量</div>
+      <div><b>厂商撑不撑得住</b>2025 年营收 180 万美元，亏损约 1.4 亿</div>
+      <div><b>真实效率是多少</b>接管率和节拍，还没有公开实测</div>
+    </div>
+
+    <p class="sub-h" style="margin-top:44px">四家的交付模式，摆在一起看</p>
+    <div class="scroll">
+    <table class="tbl">
+      <thead><tr><th>厂商</th><th>怎么收钱</th><th>技术风险谁扛</th><th>怎么验收</th><th>公开到口径阶梯哪一级</th></tr></thead>
+      <tbody>
+        <tr><td><b>Agility Digit</b></td><td>月租 + 部署费</td><td>厂商：技能没证明，订单不放量</td><td>按技能里程碑</td><td>订单、累计在岗时长</td></tr>
+        <tr><td><b>Maven</b></td><td>长期合同</td><td>双方</td><td>没说</td><td>每天 16 小时</td></tr>
+        <tr><td><b>智元</b></td><td>没说</td><td>没说</td><td>没说</td><td>部署台数</td></tr>
+        <tr><td><b>Atlas</b></td><td>没说</td><td>没说</td><td>没说</td><td>目标：两年回本</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p class="sub-h" style="margin-top:44px">拿走三条</p>
+    <div class="lessons">
+      <div class="lesson"><h5>合同按技能切开</h5><p>先签总量，每项技能配一张验收表，过一项放一批。</p></div>
+      <div class="lesson"><h5>部署和改造单独报价</h5><p>护栏、改线、集成的钱单列，别让它藏进月租里。</p></div>
+      <div class="lesson"><h5>立项报告写满八个数</h5><p>月租、部署费、日工时、顶替几个人、节拍比、接管率、护栏费、可用率。</p></div>
+    </div>
+    <dl class="lens" style="margin-top:28px">
+      <div class="r" data-r="dev"><dt>研发</dt><dd>“按技能验收”的另一面，是每项技能都要有成功判据和测试协议。评测体系本身就是交付物。</dd></div>
+      <div class="r" data-r="pm"><dt>产品与项目</dt><dd>用上面的计算器和验收表写立项初稿，再请供应商按你的班次填“干活效率”这一格。</dd></div>
+      <div class="r" data-r="edu"><dt>教育</dt><dd>成本、规模、合同、安全全在一个案例里，适合放进工程管理课。</dd></div>
+    </dl>
+    <div class="src" style="margin-top:20px"><a href="https://www.sec.gov/Archives/edgar/data/0002074973/000121390026107259/ea030784201ex99-1.htm">SEC 8-K 附件</a><a href="https://www.humanoidsdaily.com/news/agility-investor-day-digit-5-launch-costs-and-a-300m-order-that-unlocks-skill-by-skill">Humanoids Daily：投资者日</a><a href="https://www.therobotreport.com/agility-robotics-reports-18m-revenue-ahead-of-humanoid-spac/">The Robot Report</a></div>
+  </div>
+</section>
+
+<!-- REVIEW + EN -->
+<section class="band b-white" id="review">
+  <div class="frame">
+    <div class="two">
+      <div>
+        <div class="sh" style="margin-bottom:20px"><span class="no">编后</span><h2>这期我们查了什么</h2></div>
+        <p style="font-size:15px">对照了 The Robot Report、RobotToday、Humanoids Daily 和 21 世纪经济报道。Physical Intelligence、Google DeepMind、LeRobot、NVIDIA 新闻室这两周没有新发布；宇树、星海图、傅利叶、Figure 在窗口内没有找到可靠的落地或技术消息，这期就不写了。</p>
+        <p style="font-size:15px;margin-top:12px">上半年人形出货有两组数：IDC 说约 2.5 万台、中国厂商约 78%；<a href="https://21jingji.com/article/20261002/herald/894cb02fbfc14660d8e452068b44bdb0.html">另一组统计</a>说约 1.91 万台、中国超过 97%。两组并列，留给你判断。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:20px;font-size:13.5px">
+          <span class="ev o">官方</span><span>公告、监管文件、论文</span>
+          <span class="ev s">公司自述</span><span>演示、投资者材料</span>
+          <span class="ev n">媒体</span><span>还没回到一手来源</span>
+          <span class="ev e">说明</span><span>评测范围或观点</span>
+        </div>
+      </div>
+      <div lang="en">
+        <div class="sh" style="margin-bottom:20px"><span class="no">EN</span><h2>English Summary</h2></div>
+        <ul class="eng">
+          <li><b>Two ledgers.</b> Chinese vendors publish unit counts: AGIBOT put 300+ robots into Chimelong and 100 X2s into 100 stores; Galbot ET1 took 200+ pre-orders in a day. Agility publishes unit economics: $8,500 a month per Digit, a 1,000-unit order released skill by skill, general availability now end-2027.</li>
+          <li><b>Landscape:</b> AMD buys World Labs for about $8.2B in stock; MoveIt and RealSense change owners; Boston Dynamics hires Amazon's Rohit Prasad as CEO.</li>
+          <li><b>Products:</b> humanoid prices now run from ¥79,000 (Galbot ET1) and $18,000 (Astribot T1) to about $200,000.</li>
+          <li><b>Disclosure ladder:</b> most numbers sit at capacity, order or shipment level; almost nobody publishes daily hours or intervention rates.</li>
+          <li><b>Education:</b> nine Chinese universities open the first undergraduate programs in embodied AI; Shanghai hosts an international skills contest from Oct 23.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><div class="frame"><span>全球具身智能观察 · 双周刊 · 开源项目 · 插画为本刊原创</span><span class="mono">第 1 期 · 2026.09.24–10.07 · 样刊</span></div></footer>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  function mk(svg,n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;svg.appendChild(e);return e;}
+  function v(n){return 'var(--'+n+')';}
+  var tip=document.getElementById('tip');
+  function hover(el,msg){
+    function show(x,y){tip.textContent=msg;tip.hidden=false;tip.style.left=Math.min(x+14,window.innerWidth-316)+'px';tip.style.top=(y+14)+'px';}
+    el.setAttribute('tabindex','0');
+    el.addEventListener('mousemove',function(e){show(e.clientX,e.clientY);});
+    el.addEventListener('focus',function(){var b=el.getBoundingClientRect();show(b.right,b.bottom);});
+    el.addEventListener('mouseleave',function(){tip.hidden=true;});
+    el.addEventListener('blur',function(){tip.hidden=true;});
+  }
+  var btns=document.querySelectorAll('.roles button');
+  function setRole(r){document.body.setAttribute('data-role',r);btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.role===r));});try{localStorage.setItem('eio-role',r);}catch(e){}}
+  btns.forEach(function(b){b.addEventListener('click',function(){setRole(b.dataset.role);});});
+  var saved='all';try{saved=localStorage.getItem('eio-role')||'all';}catch(e){} if(!/^(all|dev|pm|edu)$/.test(saved))saved='all'; setRole(saved);
+
+  /* deal map */
+  (function(){
+    var s=document.getElementById('deal'),W=900,H=340,L=70,R=40,T=20,B=40,BAND=46;
+    var d0=Date.UTC(2026,8,17),d1=Date.UTC(2026,9,7);
+    function X(m,d){return L+(Date.UTC(2026,m-1,d)-d0)/(d1-d0)*(W-L-R);}
+    var yTop=T,yBot=H-B-BAND; function Y(val){return yBot-(Math.log10(val)-7)/(10-7)*(yBot-yTop);}
+    mk(s,'rect',{x:X(9,17),y:T-6,width:X(9,24)-X(9,17),height:H-B-T+6,fill:v('strong'),opacity:.7});
+    mk(s,'text',{x:X(9,17)+8,y:T+8,'font-size':11,fill:v('muted')},'窗口前补遗');
+    [[1e7,'$10M'],[1e8,'$100M'],[1e9,'$1B'],[1e10,'$10B']].forEach(function(t){var y=Y(t[0]);mk(s,'line',{x1:L,x2:W-R,y1:y,y2:y,stroke:v('hair')});mk(s,'text',{x:L-10,y:y+4,'text-anchor':'end','font-size':11,fill:v('muted'),'font-family':'JetBrains Mono, monospace'},t[1]);});
+    var by=H-B-BAND/2; mk(s,'line',{x1:L,x2:W-R,y1:by,y2:by,stroke:v('hair'),'stroke-dasharray':'3 4'}); mk(s,'text',{x:L-10,y:by+4,'text-anchor':'end','font-size':11,fill:v('muted')},'未披露');
+    mk(s,'line',{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:v('faint')});
+    [[9,17],[9,24],[10,1],[10,7]].forEach(function(t){var x=X(t[0],t[1]);mk(s,'line',{x1:x,x2:x,y1:H-B,y2:H-B+4,stroke:v('faint')});mk(s,'text',{x:x,y:H-B+18,'text-anchor':'middle','font-size':11,fill:v('muted'),'font-family':'JetBrains Mono, monospace'},(t[0]<10?'0':'')+t[0]+'.'+(t[1]<10?'0':'')+t[1]);});
+    var data=[
+      {m:9,d:18,n:'软银收购 RAI Institute',v:null,t:'acq',dy:-12},
+      {m:9,d:22,n:'Cognex 收购 RealSense',v:5e8,t:'acq'},
+      {m:9,d:23,n:'高通收购 PickNik',v:null,t:'acq',dy:20},
+      {m:9,d:28,n:'AMD 收购 World Labs',v:8.2e9,t:'acq'},
+      {m:9,d:28,n:'SiMa.ai C 轮',v:1.5e8,t:'fund',anchor:'end',dx:-12},
+      {m:9,d:30,n:'软银 → ASI',v:2.25e8,t:'fund'},
+      {m:9,d:30,n:'FORT Robotics SPAC',v:5.57e8,t:'ipo',note:'企业价值',dy:-10},
+      {m:10,d:1,n:'Maven A 轮',v:1e8,t:'fund',dy:16},
+      {m:10,d:5,n:'Teradyne → Bright Machines',v:null,t:'fund',dy:-12,anchor:'end',dx:-12},
+      {m:9,d:28,n:'RoboTechnik 港股上市',v:null,t:'ipo',dy:20}
+    ];
+    data.forEach(function(p){
+      var x=X(p.m,p.d),y=p.v?Y(p.v):by,sh;
+      if(p.t==='acq')sh=mk(s,'circle',{cx:x,cy:y,r:7.5,fill:v('d1'),stroke:v('paper'),'stroke-width':2});
+      else if(p.t==='fund')sh=mk(s,'rect',{x:x-6.5,y:y-6.5,width:13,height:13,rx:2,fill:v('d2'),stroke:v('paper'),'stroke-width':2});
+      else sh=mk(s,'path',{d:'M'+x+' '+(y-8)+'L'+(x+8)+' '+y+'L'+x+' '+(y+8)+'L'+(x-8)+' '+y+'Z',fill:v('paper'),stroke:v('ink'),'stroke-width':2});
+      var amt=p.v?(p.v>=1e9?'$'+(p.v/1e9).toFixed(1)+'B':'$'+Math.round(p.v/1e6)+'M'):'未披露';
+      mk(s,'text',{x:x+(p.dx||12),y:y+(p.dy!=null?p.dy:4),'text-anchor':p.anchor||'start','font-size':12,fill:v('ink'),'font-weight':500},p.n);
+      hover(sh,(p.m<10?'0':'')+p.m+'.'+(p.d<10?'0':'')+p.d+' · '+p.n+' · '+amt+(p.note?'（'+p.note+'）':''));
+    });
+  })();
+
+  /* price */
+  (function(){
+    var s=document.getElementById('price'),W=900,H=360,L=220,R=60,T=26,B=36;
+    var rows=[
+      {g:'售价'},
+      {n:'银河通用 ET1 标准版',v:79000/7.1,t:'p',lab:'¥79,000'},
+      {n:'Astribot T1',v:18000,t:'p',lab:'$18,000'},
+      {n:'银河通用 ET1 Pro',v:139000/7.1,t:'p',lab:'¥139,000'},
+      {n:'银河通用 ET1 旗舰版',v:179000/7.1,t:'p',lab:'¥179,000'},
+      {n:'Agility 直售价（上市文件）',v:200000,t:'p',lab:'$200,000'},
+      {g:'物料成本'},
+      {n:'Digit 5 目标（年产 1 万台）',v:30000,t:'c',lab:'$30,000'},
+      {n:'Digit 4（8-K）',v:125000,t:'c',lab:'$125,000'},
+      {n:'Digit 5 上市初期（媒体）',v:150000,t:'c',lab:'$150,000'}
+    ];
+    var lo=Math.log10(5000),hi=Math.log10(300000);
+    function X(val){return L+(Math.log10(val)-lo)/(hi-lo)*(W-L-R);}
+    var rh=(H-T-B)/rows.length;
+    [5000,10000,30000,100000,300000].forEach(function(t){var x=X(t);mk(s,'line',{x1:x,x2:x,y1:T-4,y2:H-B,stroke:v('hair')});mk(s,'text',{x:x,y:H-B+18,'text-anchor':'middle','font-size':11,fill:v('muted'),'font-family':'JetBrains Mono, monospace'},'$'+(t/1000)+'k');});
+    rows.forEach(function(r,i){
+      var y=T+rh*i+rh/2;
+      if(r.g){mk(s,'text',{x:12,y:y+4,'font-size':12,fill:v('coral-ink'),'font-weight':600,'letter-spacing':'1'},r.g);mk(s,'line',{x1:60,x2:W-R,y1:y,y2:y,stroke:v('hair'),'stroke-dasharray':'2 4'});return;}
+      mk(s,'text',{x:L-14,y:y+4,'text-anchor':'end','font-size':12.5,fill:v('ink')},r.n);
+      mk(s,'line',{x1:X(5000),x2:X(r.v),y1:y,y2:y,stroke:v('hair'),'stroke-width':2});
+      var c=r.t==='p'?mk(s,'circle',{cx:X(r.v),cy:y,r:7,fill:v('d1'),stroke:v('paper'),'stroke-width':2}):mk(s,'circle',{cx:X(r.v),cy:y,r:6,fill:v('paper'),stroke:v('d2'),'stroke-width':2.5});
+      mk(s,'text',{x:X(r.v)+13,y:y+4,'font-size':12,fill:v('muted'),'font-family':'JetBrains Mono, monospace'},r.lab);
+      hover(c,r.n+' · '+r.lab+(r.lab.charAt(0)==='¥'?'（约 $'+Math.round(r.v).toLocaleString()+'）':''));
+    });
+  })();
+
+  /* flow */
+  (function(){
+    var s=document.getElementById('flow');
+    var defs=mk(s,'defs',{});var m=document.createElementNS(NS,'marker');m.setAttribute('id','ah');m.setAttribute('viewBox','0 0 10 10');m.setAttribute('refX','9');m.setAttribute('refY','5');m.setAttribute('markerWidth','7');m.setAttribute('markerHeight','7');m.setAttribute('orient','auto');var mp=document.createElementNS(NS,'path');mp.setAttribute('d','M0 0L10 5L0 10Z');mp.setAttribute('fill','#cc785c');m.appendChild(mp);defs.appendChild(m);
+    var nodes=[{x:20,t:'签订总订单',s:'1,000 台 · 3 年 RaaS'},{x:240,t:'部署首批机器人',s:'部署费约 $25k / 台'},{x:460,t:'验证一项技能',s:'合同里程碑 + 规格'},{x:680,t:'释放下一批',s:'按技能放量'},{x:900,t:'扩展到新用例',s:'更多技能和站点'}];
+    nodes.forEach(function(n,i){mk(s,'rect',{x:n.x,y:52,width:180,height:76,rx:10,fill:v('band-3'),stroke:i===2?'#cc785c':v('band-hair'),'stroke-width':i===2?2:1});
+      mk(s,'text',{x:n.x+90,y:84,'text-anchor':'middle','font-size':15,fill:v('band-fg'),'font-weight':600},n.t);
+      mk(s,'text',{x:n.x+90,y:108,'text-anchor':'middle','font-size':12,fill:v('band-mute')},n.s);
+      if(i<nodes.length-1)mk(s,'line',{x1:n.x+182,y1:90,x2:n.x+218,y2:90,stroke:'#cc785c','stroke-width':2,'marker-end':'url(#ah)'});});
+    mk(s,'path',{d:'M990 130 C 990 180, 550 180, 550 132',fill:'none',stroke:'#cc785c','stroke-width':1.5,'stroke-dasharray':'5 5','marker-end':'url(#ah)'});
+    mk(s,'text',{x:770,y:184,'text-anchor':'middle','font-size':12,fill:v('band-mute')},'每个新用例重复一次“验证 → 释放”');
+    mk(s,'text',{x:20,y:28,'font-size':12,fill:v('band-mute')},'技术风险留在厂商一侧：技能没被证明，订单不放量');
+  })();
+
+  /* slip */
+  (function(){
+    var s=document.getElementById('slip'),L=40,R=40,W=1100;
+    var q0=2026.5,q1=2028.5;function X(y){return L+(y-q0)/(q1-q0)*(W-L-R);}
+    mk(s,'line',{x1:L,x2:W-R,y1:80,y2:80,stroke:v('band-hair'),'stroke-width':2});
+    [2026.5,2027,2027.5,2028,2028.5].forEach(function(t){var x=X(t);mk(s,'line',{x1:x,x2:x,y1:74,y2:86,stroke:v('band-mute')});mk(s,'text',{x:x,y:108,'text-anchor':'middle','font-size':12,fill:v('band-mute'),'font-family':'JetBrains Mono, monospace'},Math.floor(t)+(t%1?' 下半年':' 上半年'));});
+    var a=X(2026.85),b1=X(2027.05),b2=X(2027.45),c1=X(2027.9),c2=X(2028.15);
+    mk(s,'circle',{cx:a,cy:80,r:8,fill:v('band'),stroke:v('band-mute'),'stroke-width':2});
+    mk(s,'text',{x:a,y:132,'text-anchor':'middle','font-size':12.5,fill:v('band-mute')},'原计划 2026 年底（S-4）');
+    mk(s,'rect',{x:b1,y:72,width:b2-b1,height:16,rx:8,fill:v('d2')});
+    mk(s,'text',{x:(b1+b2)/2,y:56,'text-anchor':'middle','font-size':12.5,fill:v('band-fg')},'抢先体验 2027 上半年');
+    mk(s,'rect',{x:c1,y:72,width:c2-c1,height:16,rx:8,fill:'#cc785c'});
+    mk(s,'text',{x:(c1+c2)/2,y:56,'text-anchor':'middle','font-size':12.5,fill:v('band-fg'),'font-weight':600},'全面供货 2027 年底至 2028 年初');
+  })();
+
+  /* calculator */
+  (function(){
+    var f=document.getElementById('c-fee'),d=document.getElementById('c-dep'),l=document.getElementById('c-lab'),e=document.getElementById('c-eff');
+    var bar=document.getElementById('calcbar');
+    function money(x){var a=Math.abs(x);var s=a>=1e6?(a/1e6).toFixed(2)+'M':a>=1e3?Math.round(a/1e3)+'k':Math.round(a)+'';return (x<0?'−$':'$')+s;}
+    function run(){
+      var fee=+f.value,dep=+d.value,lab=+l.value,eff=+e.value/100;
+      document.getElementById('o-fee').textContent='$'+fee.toLocaleString();
+      document.getElementById('o-dep').textContent='$'+dep.toLocaleString();
+      document.getElementById('o-lab').textContent='$'+lab.toLocaleString();
+      document.getElementById('o-eff').textContent=Math.round(eff*100)+'%';
+      var save=lab*eff-12*fee, mon=save/12;
+      document.getElementById('r-save').textContent=money(save);
+      document.getElementById('r-pay').textContent=mon<=0?'无法回本':(dep/mon<1?'< 1 个月':(dep/mon).toFixed(1)+' 个月');
+      var cost3=36*fee+dep, val3=lab*eff*3;
+      document.getElementById('r-roi').textContent=(val3/cost3).toFixed(2)+'x';
+      while(bar.firstChild)bar.removeChild(bar.firstChild);
+      var max=Math.max(cost3,val3,1),L=110,W=520,Rr=60;function X(x){return L+x/max*(W-L-Rr);}
+      [['3 年总支出',cost3,'#cc785c'],['3 年替代价值',val3,v('d2')]].forEach(function(r,i){var y=22+i*58;
+        mk(bar,'text',{x:L-10,y:y+22,'text-anchor':'end','font-size':13,fill:v('band-fg')},r[0]);
+        mk(bar,'rect',{x:L,y:y,width:Math.max(X(r[1])-L,2),height:34,rx:4,fill:r[2]});
+        mk(bar,'text',{x:X(r[1])+8,y:y+22,'font-size':12.5,fill:v('band-fg'),'font-family':'JetBrains Mono, monospace'},money(r[1]));});
+    }
+    [f,d,l,e].forEach(function(x){x.addEventListener('input',run);});
+    document.getElementById('c-cn').addEventListener('click',function(){l.value=17000;run();});
+    run();
+  })();
+})();
+</script>

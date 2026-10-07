@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 550" role="img" aria-labelledby="title desc">
+<title id="title">换一个家庭，家务任务还能完成吗？</title>
+<desc id="desc">原创概念插图：一个机器人在房间内面对床、毛巾和沙发。背景的30个方格对应评测家庭数量，不代表真实户型或单个家庭成绩。</desc>
+<defs>
+  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#dedfcf" stroke-width=".7"/></pattern>
+  <pattern id="rooms" width="43" height="43" patternUnits="userSpaceOnUse"><rect x="5" y="5" width="29" height="29" fill="none" stroke="#7e9b79" stroke-width="1.2"/><path d="M5 23h10v11M25 5v10h9" stroke="#7e9b79" fill="none" stroke-width="1.2"/></pattern>
+  <marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="#cd704d"/></marker>
+</defs>
+<rect width="760" height="550" fill="#edf0dc"/>
+<rect width="760" height="550" fill="url(#grid)"/>
+<circle cx="385" cy="295" r="188" fill="#dce6c2" opacity=".5"/>
+<g font-family="Georgia,serif" fill="#234837"><text x="38" y="61" font-size="55">30</text><text x="38" y="86" font-size="12" letter-spacing="2">UNSEEN HOMES</text></g>
+<g transform="translate(487 31)"><rect width="258" height="215" fill="url(#rooms)"/><path d="M5 207H250" stroke="#d0744f" stroke-width="2"/><text x="6" y="235" font-family="sans-serif" font-size="10" fill="#5c7057">30 个家庭 · 每格仅表示一个测试场所</text></g>
+<g stroke="#315c48" stroke-width="2" stroke-linejoin="round">
+  <path d="M111 288L363 160L655 299L404 456Z" fill="#d4dfb8"/>
+  <path d="M111 288V155L363 29V160Z" fill="#f7f6e9"/>
+  <path d="M363 29L655 168V299L363 160Z" fill="#e6ecd5"/>
+  <path d="M111 288L404 428L655 299M363 160V29" fill="none"/>
+  <path d="M208 242L499 382M286 202L577 340M178 320L424 195M286 370L534 246" fill="none" stroke="#a2b38c" stroke-width="1"/>
+  <path d="M166 153L253 109V195L166 239Z" fill="#c5d9c3"/><path d="M209 131V217M166 196L253 152" stroke="#718e72"/>
+  <path d="M481 133L600 191V225L481 168Z" fill="#c5d9c3"/><path d="M541 162V197" stroke="#718e72"/>
+  <g><path d="M167 279L206 259L295 302L256 322Z" fill="#f5eed6"/><path d="M167 279V252L206 233L295 275V302L206 259Z" fill="#a5bea0"/><path d="M167 252L206 233L217 239L178 259Z" fill="#718f75"/><path d="M256 322V303L295 283V302Z" fill="#769875"/><path d="M178 274L209 258L244 275L213 291Z" fill="#f8f6e8"/><path d="M213 291L244 275L277 291L246 307Z" fill="#d1d6bd"/><path d="M175 285V298M287 306V318" fill="none"/></g>
+  <g><path d="M435 225L496 195L610 250L549 281Z" fill="#c8bca0"/><path d="M435 225V249L549 305V281Z" fill="#e6dcc1"/><path d="M549 281V305L610 273V250Z" fill="#b1ab8d"/><path d="M443 217L497 191L606 243L552 270Z" fill="#f7f3de"/><path d="M447 211L476 197L505 211L476 226Z" fill="#cad6b6"/><path d="M521 225L552 211L580 225L550 241Z" fill="#c4d3b4"/><path d="M485 237L539 211M514 251L568 224" fill="none" stroke="#d6d3b9" stroke-width="1.2"/></g>
+  <g><path d="M349 345L387 326L437 350L399 369Z" fill="#e9d4bb"/><path d="M349 345V353L399 378V369Z" fill="#c2a88b"/><path d="M399 369V378L437 358V350Z" fill="#bbac8d"/><path d="M359 339L384 327L419 344L394 356Z" fill="#f7f2de"/><path d="M359 333L384 321L419 338L394 350Z" fill="#dbe4c6"/><path d="M365 326L387 315L415 329L394 340Z" fill="#edf1dd"/></g>
+  <g><ellipse cx="344" cy="307" rx="36" ry="17" fill="#829c7b" opacity=".25" stroke="none"/>
+    <path d="M326 273L320 302L335 311M348 276L352 304L369 309" fill="none" stroke="#234837" stroke-width="11"/>
+    <path d="M312 230L335 217L358 228L351 275L330 285L315 272Z" fill="#f9f7e9"/>
+    <path d="M312 230L335 243L358 228M335 243V281" fill="none" stroke="#93a78a"/>
+    <path d="M319 240L296 267L267 266M351 241L370 267L393 285" fill="none" stroke="#234837" stroke-width="9"/>
+    <circle cx="298" cy="265" r="5" fill="#d37651"/><circle cx="369" cy="266" r="5" fill="#d37651"/>
+    <path d="M323 195L336 188L351 195V214L337 222L323 214Z" fill="#ecedda"/><path d="M328 203L344 203" stroke="#234837" stroke-width="4"/>
+  </g>
+</g>
+<g fill="none" stroke="#ce7754" stroke-width="1.5" marker-end="url(#arrow)"><path d="M311 451Q277 405 249 353" stroke-dasharray="4 5"/><path d="M450 445Q529 413 565 330" stroke-dasharray="4 5"/></g>
+<g font-family="sans-serif" font-size="12" fill="#315c48"><text x="126" y="330">整理客厅</text><text x="431" y="395">叠毛巾</text><text x="600" y="294">铺床</text></g>
+<g fill="#315c48"><circle cx="122" cy="504" r="4"/><circle cx="138" cy="504" r="4" opacity=".65"/><circle cx="154" cy="504" r="4" opacity=".35"/></g>
+<text x="175" y="508" font-family="sans-serif" font-size="12" fill="#516f55">同一任务，换一个房间。</text>
+<text x="724" y="512" text-anchor="end" font-family="sans-serif" font-size="9" fill="#72806c">OBSERVATORY / ORIGINAL DRAWING</text>
+</svg>

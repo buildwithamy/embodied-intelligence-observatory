@@ -1,0 +1,28 @@
+# Open searches are required coverage, never limited to the entity watchlist.
+capital:
+  en: ["robotics acquisition merger funding strategic investment", "spatial intelligence world model physical AI acquisition"]
+  zh: ["机器人 具身智能 收购 融资 战略投资", "空间智能 世界模型 并购 芯片 云计算"]
+models:
+  en: ["robot foundation model generalist policy VLA release", "interactive 3D world model spatial intelligence release"]
+  zh: ["机器人 基础模型 通用策略 VLA 发布", "空间智能 世界模型 物理AI 发布"]
+products:
+  en: ["humanoid robot hand arm platform launch"]
+  zh: ["人形机器人 灵巧手 机械臂 新产品 发布"]
+deployment:
+  en: ["robot humanoid factory warehouse commercial deployment orders"]
+  zh: ["机器人 工厂 门店 批量部署 订单 商业化"]
+benchmarks:
+  en: ["robot generalization real robot evaluation benchmark"]
+  zh: ["机器人 泛化 真机 评测 基准"]
+infrastructure:
+  en: ["physical AI edge cloud inference compute simulation platform", "spatial intelligence GPU simulation real-world AI"]
+  zh: ["机器人 推理 算力 仿真 计算平台", "具身智能 边缘 云端 推理 工具链"]
+open_source:
+  en: ["robotics VLA dataset open source LeRobot ROS release"]
+  zh: ["机器人 具身智能 数据集 开源 发布"]
+policy:
+  en: ["robotics physical AI policy standards government programme"]
+  zh: ["人形机器人 具身智能 国家标准 政策 示范工程"]
+education:
+  en: ["robotics embodied AI education curriculum course talent programme"]
+  zh: ["具身智能 机器人 新专业 微专业 培养方案 课程 教学标准"]

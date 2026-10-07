@@ -1,0 +1,34 @@
+organizations:
+  - OpenAI
+  - Google DeepMind
+  - NVIDIA
+  - Physical Intelligence
+  - Skild
+  - Figure
+  - Agility Robotics
+  - Tesla
+  - Boston Dynamics
+  - 1X
+  - Apptronik
+  - 宇树
+  - 智元
+  - 银河通用
+  - 傅利叶
+  - 优必选
+event_terms:
+  - foundation model
+  - benchmark
+  - acquisition
+  - funding
+  - deployment
+  - launch
+  - release
+  - 融资
+  - 收购
+  - 订单
+  - 发布
+  - 正式开设
+  - 专业标准
+  - 国家级
+always_review_categories: [policy]
+education_major_terms: [degree, curriculum, standard, 专业, 培养标准]

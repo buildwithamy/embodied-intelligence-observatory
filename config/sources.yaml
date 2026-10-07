@@ -1,0 +1,138 @@
+# Public first-party sources only. The visible RSS/list window is not a full archive.
+sources:
+  - name: robotics_arxiv_daily
+    type: robotics_arxiv_daily
+    repo: jiangranlv/robotics_arXiv_daily
+    url: https://github.com/jiangranlv/robotics_arXiv_daily
+    category: paper
+    priority: 1
+    enabled: true
+    reliability: community_index
+    notes: 日报用于发现；论文事实回到原始arXiv摘要页，日索引日期不等于发表日期。
+  - name: huggingface_daily
+    type: huggingface_daily
+    url: https://huggingface.co/api/daily_papers
+    category: paper
+    priority: 1
+    enabled: true
+    reliability: community_index
+    notes: 按日期调用公开API，社区热度不是技术重要性的替代指标。
+  - name: nvidia_robotics
+    type: rss
+    url: https://blogs.nvidia.com/blog/category/robotics/feed/
+    category: industry
+    priority: 2
+    enabled: true
+    reliability: official
+    organizations: [NVIDIA]
+    keywords: [robot, embodied, physical AI, Isaac, humanoid]
+    notes: 公司官方博客；性能及商业主张归属于公司，不能写成独立验证。
+  - name: deepmind_robotics
+    type: rss
+    url: https://deepmind.google/blog/rss.xml
+    category: industry
+    priority: 2
+    enabled: true
+    reliability: official
+    organizations: [Google DeepMind]
+    keywords: [robot, embodied, physical intelligence, manipulation, humanoid]
+    notes: 官方总RSS必须进行机器人主题过滤，不能把通用Gemini发布凑进产业栏目。
+  - name: lerobot_releases
+    type: github_releases
+    url: https://api.github.com/repos/huggingface/lerobot/releases
+    repo: huggingface/lerobot
+    project: LeRobot
+    category: open_source
+    priority: 1
+    enabled: true
+    reliability: official_release
+    organizations: [Hugging Face]
+    notes: 仅正式Release；按published_at筛选，排除draft与prerelease。
+  - name: ros2_releases
+    type: github_releases
+    url: https://api.github.com/repos/ros2/ros2/releases
+    repo: ros2/ros2
+    project: ROS 2
+    category: open_source
+    priority: 1
+    enabled: true
+    reliability: official_release
+    organizations: [Open Robotics]
+    notes: 分页读取整个release列表；ROS 2各发行版可能另有包级更新，本源不覆盖全部软件包。
+  - name: moveit2_releases
+    type: github_releases
+    url: https://api.github.com/repos/moveit/moveit2/releases
+    repo: moveit/moveit2
+    project: MoveIt 2
+    category: open_source
+    priority: 2
+    enabled: true
+    reliability: official_release
+    organizations: [MoveIt]
+    notes: 核验时该仓库Release列表为空；标签与changelog不冒充GitHub Release。
+  - name: mujoco_releases
+    type: github_releases
+    url: https://api.github.com/repos/google-deepmind/mujoco/releases
+    repo: google-deepmind/mujoco
+    project: MuJoCo
+    category: open_source
+    priority: 1
+    enabled: true
+    reliability: official_release
+    organizations: [Google DeepMind]
+    notes: 官方模拟器版本说明，不以star增量充当开源更新。
+  - name: isaaclab_releases
+    type: github_releases
+    url: https://api.github.com/repos/isaac-sim/IsaacLab/releases
+    repo: isaac-sim/IsaacLab
+    project: Isaac Lab
+    category: open_source
+    priority: 1
+    enabled: true
+    reliability: official_release
+    organizations: [NVIDIA]
+    notes: 使用GitHub prerelease标志过滤；保留官方release正文证据。
+  - name: mit_robotics
+    type: rss
+    url: https://news.mit.edu/topic/mitrobotics-rss.xml
+    category: technology
+    priority: 2
+    enabled: true
+    reliability: official
+    organizations: [MIT]
+    keywords: [robot, embodied, manipulation, humanoid]
+    notes: 官方RSS目录实际链接；高校研究新闻归技术类，不能当作课程与人才培养动态。
+  - name: mit_robotics_education
+    type: rss
+    url: https://news.mit.edu/rss/topic/education
+    category: education
+    priority: 1
+    enabled: true
+    reliability: official
+    organizations: [MIT]
+    keywords: [robot, embodied, manipulation, mechatronic, autonomous systems]
+    title_keywords: [robot, embodied, mechatronic, autonomous systems]
+    education_keywords: [course, curriculum, teaching, learning, workshop, education, textbook, training]
+    notes: 标题含机器人主题且正文含教学主题；泛太空课程里附带提到机器人不纳入，普通招生、排名、泛AI新闻不纳入。
+  - name: moe_education_news
+    type: official_html
+    url: https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/
+    category: education
+    priority: 1
+    enabled: true
+    reliability: official
+    organizations: [中华人民共和国教育部]
+    keywords: [机器人, 具身智能, 智能制造, 机电一体化]
+    education_keywords: [专业, 课程, 教材, 培养, 实训, 教学]
+    notes: 当前栏目可见日期链接+详情发布日期；访问可能403/TLS失败，必须降级并在manifest记录。
+  - name: moe_programme_policy
+    type: official_html
+    url: https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/
+    category: policy
+    priority: 1
+    enabled: true
+    reliability: official
+    organizations: [中华人民共和国教育部]
+    keywords: [机器人, 具身智能, 智能制造, 机电一体化]
+    education_keywords: [专业, 课程, 培养, 教学]
+    notes: 本科专业设置官方通知；不把网页路径日期当事实，详情元数据核实。仅覆盖可见列表。

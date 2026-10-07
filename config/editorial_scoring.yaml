@@ -1,0 +1,18 @@
+schema_version: '0.4'
+weights:
+  strategic_impact: 0.30
+  cross_ecosystem_impact: 0.20
+  event_scale: 0.15
+  technical_significance: 0.15
+  evidence_quality: 0.10
+  freshness_momentum: 0.10
+tier_thresholds: {S: 80, A: 60}
+top_story_min_score: 65
+memory_days: 60
+discovery_days: 14
+search_backend: bing_rss
+max_results_per_query: 10
+adjacent_terms: [physical AI, spatial intelligence, world model, 3D world model, interactive world model, simulation, agentic robotics, real-world AI, robot learning, action model, 空间智能, 世界模型, 仿真, 物理AI]
+direct_terms: [robot, robotics, humanoid, embodied, 机器人, 具身, 人形, 灵巧手, 机械臂]
+event_terms: [acquire, acquisition, merger, funding, investment, release, launch, deployment, benchmark, standard, partnership, 收购, 并购, 融资, 战略投资, 发布, 部署, 订单, 标准, 政策]
+discovery_media: [Reuters, Financial Times, Bloomberg, TechCrunch, IEEE Spectrum, The Robot Report, VentureBeat, IT之家, 机器之心, 量子位]

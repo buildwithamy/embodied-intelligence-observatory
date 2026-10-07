@@ -1,0 +1,39 @@
+foundation_models:
+  - {name: Physical Intelligence, aliases: [Pi, pi0], domain: pi.website}
+  - {name: World Labs, aliases: [世界实验室], domain: worldlabs.ai}
+  - {name: Google DeepMind, aliases: [DeepMind], domain: deepmind.google}
+  - {name: OpenAI, aliases: [], domain: openai.com}
+  - {name: Skild AI, aliases: [Skild], domain: skild.ai}
+  - {name: Microsoft Research, aliases: [Microsoft], domain: microsoft.com}
+  - {name: NVIDIA Research, aliases: [], domain: research.nvidia.com}
+  - {name: Meta AI, aliases: [Meta], domain: ai.meta.com}
+robot_companies:
+  - {name: Boston Dynamics, aliases: [Atlas], domain: bostondynamics.com}
+  - {name: Agility Robotics, aliases: [Digit], domain: agilityrobotics.com}
+  - {name: Apptronik, aliases: [Apollo], domain: apptronik.com}
+  - {name: 1X, aliases: [NEO], domain: 1x.tech}
+  - {name: Figure, aliases: [Figure AI, Helix], domain: figure.ai}
+  - {name: Tesla, aliases: [Optimus], domain: tesla.com}
+  - {name: Unitree, aliases: [宇树], domain: unitree.com}
+  - {name: AGIBOT, aliases: [智元机器人, 智元], domain: agibot.com}
+  - {name: Galbot, aliases: [银河通用], domain: galbot.com}
+  - {name: UBTECH, aliases: [优必选], domain: ubtrobot.com}
+  - {name: Fourier, aliases: [傅利叶智能], domain: fftai.com}
+infrastructure:
+  - {name: AMD, aliases: [], domain: amd.com}
+  - {name: NVIDIA, aliases: [Isaac], domain: nvidia.com}
+  - {name: AWS, aliases: [Amazon Web Services], domain: aws.amazon.com}
+  - {name: Microsoft, aliases: [Azure], domain: microsoft.com}
+  - {name: Hugging Face Robotics, aliases: [LeRobot], domain: huggingface.co}
+  - {name: ROS, aliases: [Open Robotics], domain: ros.org}
+  - {name: MoveIt, aliases: [], domain: moveit.ai}
+  - {name: MuJoCo, aliases: [], domain: mujoco.org}
+  - {name: Genesis, aliases: [], domain: genesis-world.readthedocs.io}
+  - {name: ManiSkill, aliases: [], domain: maniskill.ai}
+education_policy:
+  - {name: 工业和信息化部, aliases: [MIIT], domain: miit.gov.cn}
+  - {name: 教育部, aliases: [MOE], domain: moe.gov.cn}
+  - {name: 国家标准化管理委员会, aliases: [SAC], domain: std.samr.gov.cn}
+  - {name: MIT, aliases: [], domain: mit.edu}
+  - {name: Stanford, aliases: [斯坦福], domain: stanford.edu}
+  - {name: UC Berkeley, aliases: [伯克利], domain: berkeley.edu}

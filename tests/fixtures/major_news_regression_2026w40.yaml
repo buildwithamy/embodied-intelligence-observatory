@@ -1,0 +1,18 @@
+issue: 2026-W40
+discovery_window: [2026-09-21, 2026-10-04]
+positive_events:
+  - {id: amd-world-labs-agreement, tier: S, category: capital, status: developing, original: 'newsroom.amd.com'}
+  - {id: qualcomm-picknik-agreement-20260923, tier: S, category: capital, status: developing, original: 'qualcomm.com'}
+  - {id: bfl-flux3-action, tier: A, category: models, status: new, original: 'huggingface.co'}
+  - {id: microsoft-offloaded-physical-ai-inference, tier: A, category: infrastructure, status: new, original: 'microsoft.com'}
+  - {id: figure-helix-25-unseen-homes, tier: A, category: deployment, status: developing, original: 'figure.ai'}
+  - {id: agility-digit5-cooperative-safety, tier: A, category: deployment, status: new, original: 'agilityrobotics.com'}
+  - {id: agibot-chimelong-service-deployment, tier: A, category: deployment, status: new, original: 'agibot.com'}
+  - {id: isaac-ros-5-agent-workflows, tier: A, category: open_source, status: new, original: 'nvidia.com'}
+  - {id: boston-atlas-rmac-manufacturing, tier: A, category: deployment, status: new, original: 'bostondynamics.com'}
+negative_rules:
+  - 新闻摘要不能当作已经核验的正文
+  - 最近报道不能刷新旧模型的发布日期
+  - 仅云计算关键词不能自动确认与具身智能有关
+  - 拟收购不能写成完成交割
+  - 日期不明的潜在重大事件保留在编辑桌上，禁止自动进正式正文

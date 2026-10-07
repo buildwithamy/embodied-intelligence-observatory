@@ -1,0 +1,45 @@
+weights:
+  technical_score: 0.30
+  industry_score: 0.20
+  evidence_score: 0.25
+  reproducibility_score: 0.15
+  education_score: 0.10
+threshold: 2.45
+minimum_items: 3
+minimum_papers: 1
+limits:
+  paper: 6
+  industry: 5
+  technology: 4
+  open_source: 5
+  education: 4
+  policy: 3
+relevance_terms:
+  - robot
+  - embodied
+  - manipulation
+  - locomotion
+  - navigation
+  - sim2real
+  - sim-to-real
+  - tactile
+  - spatial intelligence
+  - 3d perception
+  - world model
+  - action model
+  - vision-language-action
+  - humanoid
+  - 机器人
+  - 具身
+  - 专业标准
+  - 人才培养
+tag_terms:
+  VLA: [vision-language-action, vla]
+  Manipulation: [manipulation, grasp, dexterous, 操作]
+  World Model: [world model]
+  Humanoid: [humanoid, 人形]
+  RL: [reinforcement learning]
+  Robot Data: [dataset, robot data, teleoperation]
+  Sim2Real: [sim2real, sim-to-real]
+  Navigation: [navigation, locomotion]
+  Tactile: [tactile]

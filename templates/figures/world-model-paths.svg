@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 365" role="img" aria-labelledby="title desc">
+<title id="title">世界模型的两种用途：选择补哪些数据，选择执行哪个动作</title><desc id="desc">RoboCoach根据预测失败补充示范并更新技能。WorldLine预测候选轨迹结果，筛选后真实执行。这是依据两篇论文绘制的原理简图，不是同一系统或统一性能比较。</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="#708461"/></marker></defs>
+<rect width="760" height="365" fill="#e9eddf"/>
+<g font-family="sans-serif" fill="#234837"><text x="32" y="43" font-size="17" font-weight="600">预测之后，要做一个真实的决定</text><text x="32" y="69" font-size="11" fill="#66795f">两个研究问题：把新增示范用在哪里？从候选动作中选哪一个？</text></g>
+<g fill="none" stroke="#8c9f7e" stroke-width="1.5" marker-end="url(#arrow)"><path d="M258 151H296M458 151H496M258 265H296M458 265H496"/></g>
+<g fill="#f7f6e9" stroke="#c3cfb4"><rect x="96" y="116" width="162" height="68" rx="3"/><rect x="296" y="116" width="162" height="68" rx="3"/><rect x="496" y="116" width="230" height="68" rx="3"/>
+<rect x="96" y="230" width="162" height="68" rx="3"/><rect x="296" y="230" width="162" height="68" rx="3"/><rect x="496" y="230" width="230" height="68" rx="3"/></g>
+<g font-family="Georgia,serif" fill="#9a6a4b" font-size="36"><text x="31" y="163">01</text><text x="31" y="277">02</text></g>
+<g font-family="sans-serif" fill="#234837" text-anchor="middle"><text x="177" y="145" font-size="14">预测技能失败</text><text x="177" y="168" font-size="10" fill="#708461">RoboCoach</text><text x="377" y="157" font-size="14">补充针对性示范</text><text x="611" y="157" font-size="14">更新技能，再做真机测试</text>
+<text x="177" y="259" font-size="14">预测候选轨迹</text><text x="177" y="282" font-size="10" fill="#708461">WorldLine</text><text x="377" y="271" font-size="14">判断与筛选</text><text x="611" y="271" font-size="14">选定动作，真实执行</text></g>
+<path d="M32 207H727" fill="none" stroke="#c5d0bc"/>
+<text x="32" y="341" font-family="sans-serif" font-size="11" fill="#60745e">两条独立研究路线，不能合并为统一提升数字；推理耗时与判断误差都需要计入。</text>
+</svg>

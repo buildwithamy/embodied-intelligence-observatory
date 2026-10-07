@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-labelledby="title desc">
+<title id="title">世界模型帮忙选择补哪些数据、执行哪个动作</title><desc id="desc">左侧RoboCoach：预测技能失败、补针对性示范、更新技能再测真机。右侧WorldLine：预测候选轨迹、判断筛选、真实执行。两条独立研究路线，没有统一性能比较。</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="#708461"/></marker></defs>
+<rect width="400" height="440" fill="#e9eddf"/>
+<text x="25" y="35" font-family="sans-serif" font-size="18" font-weight="600" fill="#234837">预测之后，做一个决定</text>
+<g font-family="sans-serif" font-size="14" fill="#60745e" text-anchor="middle"><text x="100" y="83">RoboCoach</text><text x="300" y="83">WorldLine</text></g>
+<g fill="none" stroke="#8c9f7e" stroke-width="1.5" marker-end="url(#arrow)"><path d="M100 167V195M300 167V195M100 267V295M300 267V295"/></g>
+<g fill="#f7f6e9" stroke="#c3cfb4"><rect x="25" y="103" width="150" height="64" rx="3"/><rect x="225" y="103" width="150" height="64" rx="3"/><rect x="25" y="203" width="150" height="64" rx="3"/><rect x="225" y="203" width="150" height="64" rx="3"/><rect x="25" y="303" width="150" height="72" rx="3"/><rect x="225" y="303" width="150" height="72" rx="3"/></g>
+<g font-family="sans-serif" font-size="15" fill="#234837" text-anchor="middle"><text x="100" y="141">预测技能失败</text><text x="300" y="141">预测候选轨迹</text><text x="100" y="241">补针对性示范</text><text x="300" y="241">判断与筛选</text><text x="100" y="333">更新技能</text><text x="100" y="355" font-size="12" fill="#708461">再做真机测试</text><text x="300" y="345">真实执行</text></g>
+<path d="M200 97V381" fill="none" stroke="#c5d0bc"/>
+<text x="25" y="411" font-family="sans-serif" font-size="12" fill="#60745e">两项研究，不合并比较成绩。</text>
+</svg>

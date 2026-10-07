@@ -1,0 +1,19 @@
+windows:
+  weekly_days: 7
+  recent_days: 30
+retention_days:
+  S: 60
+  A: 45
+  B: 7
+scenarios:
+  - 工业制造 / 装配
+  - 仓储 / 物流 / 搬运
+  - 零售 / 商业服务
+  - 家庭 / 养老 / 服务机器人
+  - 医疗 / 康复
+  - 城市环卫 / 户外作业
+  - 巡检 / 安防 / 边防
+  - 农业 / 野外环境
+  - 通用人形机器人
+  - 教育 / 科研平台
+audit_domains: [companies, product, models, open_source, capital, policy, education]
