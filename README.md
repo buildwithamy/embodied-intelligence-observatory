@@ -75,7 +75,8 @@
 | `site/issues.toml` | 期刊目录；网站首页和本 README 的期刊列表都由它生成 |
 | `site/issues/01/` | 第 1 期页面；`src/` 下是页面模板、原创插画和构建脚本 |
 | `site/home.html`、`site/build.py` | 首页模板和整站构建脚本 |
-| `docs/EIO_改进方案_V2.md` | 定位、栏目、选题标准、信源和文风规范 |
+| `docs/EIO_改进方案_V2.md` | 定位、栏目、选题标准和信源 |
+| `docs/写作规范.md` | 标题、术语、公司名、数字单位和证据标注的写作规范 |
 | `HANDOFF.md` | 维护交接说明 |
 | `src/`、`config/`、`prompts/`、`tests/` | V0.4 新闻发现流水线（Python），后续改造成每日抓取 |
 | `docs/history/` | V0.1–V0.4 的任务书和过程记录 |
